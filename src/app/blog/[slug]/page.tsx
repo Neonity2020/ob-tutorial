@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug"; // 导入 rehypeSlug
-import { BlogPostTOC } from "@/components/blog/blog-post-toc"; // 导入 BlogPostTOC
+// import rehypeSlug from "rehype-slug"; // 移除 rehypeSlug 导入
+import { BlogPostTOC } from "@/components/blog/blog-post-toc";
 
 interface BlogPostPageProps {
   params: {
@@ -44,7 +44,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12"> {/* 移除 max-w-3xl */}
+    <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 主内容区域 */}
         <div className="lg:w-3/4">
@@ -63,7 +63,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </div>
             <Separator className="mb-8" />
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}> {/* 添加 rehypeSlug */}
+            <ReactMarkdown remarkPlugins={[remarkGfm]} /* 移除 rehypePlugins={[rehypeSlug]} */>
               {post.content}
             </ReactMarkdown>
           </article>
