@@ -127,5 +127,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(at 80% 20%, hsl(var(--primary) / 0.1), transparent 80%),
+                      radial-gradient(at 20% 80%, hsl(var(--secondary) / 0.1), transparent 80%);
+    background-attachment: fixed;
   }
 }
