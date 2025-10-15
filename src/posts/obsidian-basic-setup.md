@@ -2,7 +2,7 @@
 slug: obsidian-basic-setup
 title: Obsidian 基础设置与界面介绍
 description: 本教程将引导你完成Obsidian的初始设置，并熟悉其用户界面。
-date: 2024-07-29
+date: 2025-10-16
 sortOrder: 2 # 新增：设置排序为2，使其显示在meta-course之后
 author: NEONITY # 新增：作者信息
 ---
