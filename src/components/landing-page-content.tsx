@@ -95,7 +95,7 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">学习路径</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {learningSteps.map((step, index) => (
-            <Card key={index} className="flex flex-col items-start p-6 text-left h-full">
+            <Card key={index} className="flex flex-col items-start p-4 text-left h-full">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground text-lg font-bold mb-4">
                   {step.step}
