@@ -79,14 +79,12 @@ export function LandingPageContent() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
           <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80">
-            <Link href="/blog">
-              <span className="flex items-center gap-2"> {/* 包裹内容以确保Link只有一个子元素 */}
-                <Newspaper className="h-5 w-5" />
-                阅读教程博客
-              </span>
-            </Link>
-          </Button>
+          <Link href="/blog">
+            <Button size="lg" variant="secondary" className="hover:bg-secondary/80 flex items-center gap-2">
+              <Newspaper className="h-5 w-5" />
+              阅读教程博客
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -133,14 +131,12 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">立即开始你的Obsidian之旅！</h2>
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
           <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80">
-            <Link href="/blog">
-              <span className="flex items-center gap-2"> {/* 包裹内容以确保Link只有一个子元素 */}
-                <Newspaper className="h-5 w-5" />
-                阅读教程博客
-              </span>
-            </Link>
-          </Button>
+          <Link href="/blog">
+            <Button size="lg" variant="secondary" className="hover:bg-secondary/80 flex items-center gap-2">
+              <Newspaper className="h-5 w-5" />
+              阅读教程博客
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
