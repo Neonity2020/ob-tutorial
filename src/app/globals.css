@@ -127,5 +127,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Light theme radial gradient */
+    background-image: radial-gradient(at top, hsl(var(--background)) 0%, hsl(var(--background)) 50%, hsl(var(--muted)) 100%);
+  }
+
+  .dark body {
+    /* Dark theme radial gradient */
+    background-image: radial-gradient(at top, hsl(var(--background)) 0%, hsl(var(--background)) 50%, hsl(var(--secondary)) 100%);
   }
 }
