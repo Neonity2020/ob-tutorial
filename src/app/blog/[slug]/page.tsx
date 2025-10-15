@@ -2,7 +2,7 @@ import React from "react";
 import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays, Home } from "lucide-react"; // 导入 Home 图标
+import { CalendarDays, Home } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
@@ -54,16 +54,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           {post.content}
         </ReactMarkdown>
       </article>
-      <div className="mt-12 flex justify-center gap-4"> {/* 使用 flex 和 gap 布局按钮 */}
-        <Button asChild>
-          <Link href="/blog">返回博客列表</Link>
-        </Button>
-        <Button asChild variant="outline"> {/* 添加返回首页按钮 */}
-          <Link href="/" className="flex items-center gap-2">
+      <div className="mt-12 flex justify-center gap-4">
+        <Link href="/blog"> {/* Link 包裹 Button */}
+          <Button>返回博客列表</Button> {/* 移除 asChild */}
+        </Link>
+        <Link href="/"> {/* Link 包裹 Button */}
+          <Button variant="outline" className="flex items-center gap-2"> {/* 移除 asChild */}
             <Home className="h-4 w-4" />
             返回首页
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </div>
   );
