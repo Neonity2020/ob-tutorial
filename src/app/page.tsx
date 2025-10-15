@@ -1,4 +1,4 @@
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import { Footer } from "@/components/footer"; // 导入新的Footer组件
 import { LandingPageContent } from "@/components/landing-page-content";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-1 items-center justify-center w-full">
         <LandingPageContent />
       </main>
-      <MadeWithDyad />
+      <Footer /> {/* 使用新的Footer组件 */}
     </div>
   );
 }
