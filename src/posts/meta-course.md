@@ -3,6 +3,7 @@ slug: meta-course
 title: 站点构建思路：使用 Dyad AI 零代码构建
 description: 了解如何使用 Dyad AI 零代码构建此静态站点，以及使用 Dyad 的技巧和所需前置知识。
 date: 2024-07-29
+sortOrder: 1 # 新增：设置排序为1，使其显示在最前面
 ---
 ## 使用 Dyad AI 零代码构建此站点
 

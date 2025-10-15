@@ -21,11 +21,22 @@ export function getAllBlogPosts(): BlogPost[] {
       // 将 date 对象格式化为 'yyyy年MM月dd日' 字符串
       date: format(new Date(data.date), 'yyyy年MM月dd日'), 
       content,
+      sortOrder: data.sortOrder || undefined, // 读取 sortOrder 属性
     } as BlogPost;
   });
 
-  // Sort posts by date in descending order
-  return allPostsData.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1));
+  // Sort posts: first by sortOrder (ascending), then by date (descending)
+  return allPostsData.sort((a, b) => {
+    const aOrder = a.sortOrder ?? Infinity; // 未定义 sortOrder 的文章排在后面
+    const bOrder = b.sortOrder ?? Infinity;
+
+    if (aOrder !== bOrder) {
+      return aOrder - bOrder; // 按 sortOrder 升序排列
+    }
+
+    // 如果 sortOrder 相同或都未定义，则按日期降序排列
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
@@ -43,12 +54,13 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
     // 将 date 对象格式化为 'yyyy年MM月dd日' 字符串
     date: format(new Date(data.date), 'yyyy年MM月dd日'),
     content,
+    sortOrder: data.sortOrder || undefined, // 读取 sortOrder 属性
   } as BlogPost;
 }
 
 /**
  * 获取指定 slug 的博客文章，以及其在排序列表中的上一篇和下一篇文章。
- * 文章按日期降序排列。
+ * 文章按 sortOrder 升序，然后按日期降序排列。
  */
 export function getBlogPostWithNavigation(currentSlug: string): {
   currentPost: BlogPost | undefined;
