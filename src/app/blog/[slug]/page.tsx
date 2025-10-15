@@ -2,11 +2,11 @@ import React from "react";
 import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Home } from "lucide-react"; // 导入 Home 图标
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ReactMarkdown from "react-markdown"; // 导入 ReactMarkdown
-import remarkGfm from "remark-gfm"; // 导入 remarkGfm，支持 GitHub Flavored Markdown
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface BlogPostPageProps {
   params: {
@@ -54,9 +54,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           {post.content}
         </ReactMarkdown>
       </article>
-      <div className="mt-12 text-center">
+      <div className="mt-12 flex justify-center gap-4"> {/* 使用 flex 和 gap 布局按钮 */}
         <Button asChild>
           <Link href="/blog">返回博客列表</Link>
+        </Button>
+        <Button asChild variant="outline"> {/* 添加返回首页按钮 */}
+          <Link href="/" className="flex items-center gap-2">
+            <Home className="h-4 w-4" />
+            返回首页
+          </Link>
         </Button>
       </div>
     </div>
