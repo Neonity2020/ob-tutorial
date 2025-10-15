@@ -79,7 +79,7 @@ export function LandingPageContent() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
           <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="outline" className="hover:bg-accent">
+          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80"> {/* 样式调整 */}
             <Link href="/blog" className="flex items-center gap-2">
               <Newspaper className="h-5 w-5" />
               阅读教程博客
@@ -131,7 +131,7 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">立即开始你的Obsidian之旅！</h2>
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
           <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="outline" className="hover:bg-accent">
+          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80"> {/* 样式调整 */}
             <Link href="/blog" className="flex items-center gap-2">
               <Newspaper className="h-5 w-5" />
               阅读教程博客
