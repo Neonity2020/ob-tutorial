@@ -2,7 +2,8 @@
 slug: plugins-and-automation
 title: Obsidian 插件与自动化工作流
 description: 探索Obsidian的强大插件生态系统，学习如何利用插件和自动化提升你的笔记效率。
-date: 2023-11-15
+date: 2024-07-29
+author: NEONITY # 新增：作者信息
 ---
 ## Obsidian 插件与自动化工作流
 

@@ -2,7 +2,8 @@
 slug: mastering-bidirectional-links
 title: 掌握双向链接：构建你的知识网络
 description: 深入了解Obsidian的双向链接功能，以及如何利用它构建强大的知识网络。
-date: 2023-11-01
+date: 2024-07-29
+author: NEONITY # 新增：作者信息
 ---
 ## 掌握双向链接：构建你的知识网络
 
