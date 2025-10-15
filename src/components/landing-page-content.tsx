@@ -4,6 +4,7 @@ import React from "react";
 import { GithubCTAButtons } from "@/components/github-cta-buttons";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle"; // 导入 ThemeToggle
 
 export function LandingPageContent() {
   // TODO: 请将这些占位符替换为你的实际链接
@@ -58,6 +59,11 @@ export function LandingPageContent() {
 
   return (
     <div className="flex flex-col items-center text-center max-w-4xl mx-auto px-4 space-y-16 py-12">
+      {/* Theme Toggle */}
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
+
       {/* Hero Section */}
       <div className="space-y-6">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
@@ -77,7 +83,7 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">核心特性</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="flex flex-col items-center text-left h-full">
+            <Card key={index} className="flex flex-col items-center p-4 text-center h-full">
               <CardHeader className="pb-4">
                 <feature.icon className="h-10 w-10 text-primary mb-4" />
                 <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
@@ -95,7 +101,7 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">学习路径</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {learningSteps.map((step, index) => (
-            <Card key={index} className="flex flex-col items-start p-4 text-left h-full">
+            <Card key={index} className="flex flex-col items-start p-6 text-left h-full">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground text-lg font-bold mb-4">
                   {step.step}
