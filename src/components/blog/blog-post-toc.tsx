@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { cn, slugify } from "@/lib/utils"; // Import cn and slugify
+import { cn, slugify } from "@/lib/utils";
 
 interface Heading {
   level: number;
@@ -20,21 +20,30 @@ export function BlogPostTOC({ content }: BlogPostTOCProps) {
 
   useEffect(() => {
     const extractedHeadings: Heading[] = [];
-    // Regex to find headings (h1, h2, h3)
-    // It captures the hash symbols and the heading text
     const headingRegex = /^(#{1,3})\s(.+)$/gm;
     let match;
+    let headingIndex = 0; // 用于处理重复slug的索引
 
     while ((match = headingRegex.exec(content)) !== null) {
-      const level = match[1].length; // Number of '#' determines the level
+      const level = match[1].length;
       const text = match[2].trim();
-      const id = slugify(text); // Generate ID using the slugify utility
+      let id = slugify(text);
+      
+      // 确保ID在当前提取的列表中是唯一的
+      let uniqueId = id;
+      let counter = 1;
+      while (extractedHeadings.some(h => h.id === uniqueId)) {
+        uniqueId = `${id}-${counter}`;
+        counter++;
+      }
+      id = uniqueId;
+
       extractedHeadings.push({ level, text, id });
+      headingIndex++;
     }
     setHeadings(extractedHeadings);
   }, [content]);
 
-  // Optional: Add IntersectionObserver for active state highlighting
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,8 +54,8 @@ export function BlogPostTOC({ content }: BlogPostTOCProps) {
         });
       },
       {
-        rootMargin: "0px 0px -70% 0px", // Adjust as needed to trigger when heading is near top
-        threshold: 0.1, // Trigger when 10% of the heading is visible
+        rootMargin: "0px 0px -70% 0px",
+        threshold: 0.1,
       }
     );
 
@@ -75,8 +84,8 @@ export function BlogPostTOC({ content }: BlogPostTOCProps) {
     <nav className="sticky top-20 self-start p-4 border rounded-lg bg-card shadow-sm">
       <h3 className="text-lg font-semibold mb-4">目录</h3>
       <ul className="space-y-2">
-        {headings.map((heading) => (
-          <li key={heading.id} className={cn(
+        {headings.map((heading, index) => ( // 使用 index 作为 fallback key 的一部分
+          <li key={`${heading.id}-${index}`} className={cn( // 结合 id 和 index 确保唯一性
             "text-sm",
             heading.level === 2 && "ml-0",
             heading.level === 3 && "ml-4",

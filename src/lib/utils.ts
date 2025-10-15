@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function slugify(text: string): string {
-  return text
+  const slug = text
     .toString()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -15,4 +15,7 @@ export function slugify(text: string): string {
     .replace(/\s+/g, '-')
     .replace(/[^\w-]+/g, '')
     .replace(/--+/g, '-');
+  
+  // 如果 slug 为空，则返回一个默认值，以避免空 key 错误
+  return slug === '' ? 'untitled-heading' : slug;
 }
