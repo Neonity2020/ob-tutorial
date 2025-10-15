@@ -11,7 +11,7 @@ interface GithubCTAButtonsProps {
 
 export function GithubCTAButtons({ githubRepoUrl, downloadLink }: GithubCTAButtonsProps) {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
+    <> {/* 使用 React.Fragment 替代 div */}
       <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
         <a href={githubRepoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
           <Github className="h-5 w-5" />
@@ -24,6 +24,6 @@ export function GithubCTAButtons({ githubRepoUrl, downloadLink }: GithubCTAButto
           下载教程 Vault
         </a>
       </Button>
-    </div>
+    </>
   );
 }
