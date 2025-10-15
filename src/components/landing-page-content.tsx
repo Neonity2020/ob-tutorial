@@ -3,8 +3,10 @@
 import React from "react";
 import { GithubCTAButtons } from "@/components/github-cta-buttons";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap } from "lucide-react";
+import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap, Newspaper } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle"; // 导入 ThemeToggle
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function LandingPageContent() {
   // TODO: 请将这些占位符替换为你的实际链接
@@ -75,7 +77,15 @@ export function LandingPageContent() {
         <p className="text-base text-muted-foreground">
           从基础操作到高级技巧，一步步带你探索Obsidian的无限可能。
         </p>
-        <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
+          <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
+          <Button asChild size="lg" variant="outline" className="hover:bg-accent">
+            <Link href="/blog" className="flex items-center gap-2">
+              <Newspaper className="h-5 w-5" />
+              阅读教程博客
+            </Link>
+          </Button>
+        </div>
       </div>
 
       {/* Features Section */}
@@ -119,7 +129,15 @@ export function LandingPageContent() {
       {/* Final CTA */}
       <div className="w-full pt-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">立即开始你的Obsidian之旅！</h2>
-        <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
+          <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
+          <Button asChild size="lg" variant="outline" className="hover:bg-accent">
+            <Link href="/blog" className="flex items-center gap-2">
+              <Newspaper className="h-5 w-5" />
+              阅读教程博客
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
