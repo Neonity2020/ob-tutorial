@@ -45,3 +45,26 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
     content,
   } as BlogPost;
 }
+
+/**
+ * 获取指定 slug 的博客文章，以及其在排序列表中的上一篇和下一篇文章。
+ * 文章按日期降序排列。
+ */
+export function getBlogPostWithNavigation(currentSlug: string): {
+  currentPost: BlogPost | undefined;
+  previousPost: BlogPost | undefined;
+  nextPost: BlogPost | undefined;
+} {
+  const allPosts = getAllBlogPosts();
+  const currentIndex = allPosts.findIndex(post => post.slug === currentSlug);
+
+  if (currentIndex === -1) {
+    return { currentPost: undefined, previousPost: undefined, nextPost: undefined };
+  }
+
+  const currentPost = allPosts[currentIndex];
+  const previousPost = currentIndex > 0 ? allPosts[currentIndex - 1] : undefined;
+  const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : undefined;
+
+  return { currentPost, previousPost, nextPost };
+}

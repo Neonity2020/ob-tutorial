@@ -1,8 +1,8 @@
 import React from "react";
-import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog";
+import { getBlogPostWithNavigation, getAllBlogPosts } from "@/lib/blog"; // 更改为导入 getBlogPostWithNavigation
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays, Home } from "lucide-react";
+import { CalendarDays, Home, ArrowLeft, ArrowRight } from "lucide-react"; // 导入 ArrowLeft 和 ArrowRight
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+  const { currentPost: post } = getBlogPostWithNavigation(params.slug); // 使用新的函数
   if (!post) {
     return {
       title: "文章未找到",
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+  const { currentPost: post, previousPost, nextPost } = getBlogPostWithNavigation(params.slug); // 使用新的函数
 
   if (!post) {
     notFound();
@@ -54,12 +54,36 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           {post.content}
         </ReactMarkdown>
       </article>
-      <div className="mt-12 flex justify-center gap-4">
-        <Link href="/blog"> {/* Link 包裹 Button */}
-          <Button>返回博客列表</Button> {/* 移除 asChild */}
+      <div className="mt-12 flex justify-between items-center"> {/* 调整布局以容纳导航按钮 */}
+        {previousPost ? (
+          <Link href={`/blog/${previousPost.slug}`}>
+            <Button variant="outline" className="flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              上一篇
+            </Button>
+          </Link>
+        ) : (
+          <div className="w-[100px]" /> // 占位符，保持布局一致性
+        )}
+
+        <Link href="/blog">
+          <Button>返回博客列表</Button>
         </Link>
-        <Link href="/"> {/* Link 包裹 Button */}
-          <Button variant="outline" className="flex items-center gap-2"> {/* 移除 asChild */}
+        
+        {nextPost ? (
+          <Link href={`/blog/${nextPost.slug}`}>
+            <Button variant="outline" className="flex items-center gap-2">
+              下一篇
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        ) : (
+          <div className="w-[100px]" /> // 占位符，保持布局一致性
+        )}
+      </div>
+      <div className="mt-4 flex justify-center"> {/* 将返回首页按钮移到下方居中 */}
+        <Link href="/">
+          <Button variant="ghost" className="flex items-center gap-2">
             <Home className="h-4 w-4" />
             返回首页
           </Button>
