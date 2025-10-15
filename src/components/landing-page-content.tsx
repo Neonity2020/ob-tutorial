@@ -3,15 +3,15 @@
 import React from "react";
 import { GithubCTAButtons } from "@/components/github-cta-buttons";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap, Newspaper } from "lucide-react";
+import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap } from "lucide-react"; // 移除 Newspaper
 import { ThemeToggle } from "@/components/theme-toggle"; // 导入 ThemeToggle
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// 移除 Button 和 Link 导入，因为它们现在在 GithubCTAButtons 内部处理
 
 export function LandingPageContent() {
   // TODO: 请将这些占位符替换为你的实际链接
   const githubRepoUrl = "https://github.com/YOUR_GITHUB_REPO_URL";
   const downloadLink = "https://github.com/YOUR_GITHUB_REPO_URL/archive/refs/heads/main.zip"; // 示例：直接下载主分支zip
+  const blogLink = "/blog"; // 定义博客链接
 
   const features = [
     {
@@ -77,17 +77,7 @@ export function LandingPageContent() {
         <p className="text-base text-muted-foreground">
           从基础操作到高级技巧，一步步带你探索Obsidian的无限可能。
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
-          <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80">
-            <Link href="/blog">
-              <span className="flex items-center gap-2"> {/* 包裹内容以确保Link只有一个子元素 */}
-                <Newspaper className="h-5 w-5" />
-                阅读教程博客
-              </span>
-            </Link>
-          </Button>
-        </div>
+        <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} blogLink={blogLink} /> {/* 传递 blogLink */}
       </div>
 
       {/* Features Section */}
@@ -131,17 +121,7 @@ export function LandingPageContent() {
       {/* Final CTA */}
       <div className="w-full pt-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">立即开始你的Obsidian之旅！</h2>
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
-          <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} />
-          <Button asChild size="lg" variant="secondary" className="hover:bg-secondary/80">
-            <Link href="/blog">
-              <span className="flex items-center gap-2"> {/* 包裹内容以确保Link只有一个子元素 */}
-                <Newspaper className="h-5 w-5" />
-                阅读教程博客
-              </span>
-            </Link>
-          </Button>
-        </div>
+        <GithubCTAButtons githubRepoUrl={githubRepoUrl} downloadLink={downloadLink} blogLink={blogLink} /> {/* 传递 blogLink */}
       </div>
     </div>
   );
