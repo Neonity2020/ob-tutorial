@@ -1,140 +1,44 @@
 import { BlogPost } from "@/types/blog";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-const blogPosts: BlogPost[] = [
-  {
-    slug: "obsidian-basic-setup",
-    title: "Obsidian 基础设置与界面介绍",
-    description: "本教程将引导你完成Obsidian的初始设置，并熟悉其用户界面。",
-    date: "2023-10-26",
-    content: `
-      ## 欢迎来到 Obsidian 的世界！
-
-      Obsidian 是一款强大的知识管理工具，它以本地 Markdown 文件为基础，通过双向链接构建你的个人知识网络。本教程将帮助你迈出第一步。
-
-      ### 1. 下载与安装
-      首先，访问 [Obsidian 官网](https://obsidian.md/) 下载适用于你操作系统的版本并进行安装。
-
-      ### 2. 创建你的第一个 Vault
-      - 启动 Obsidian 后，你会看到一个欢迎界面。
-      - 点击“创建新 Vault”或“打开 Vault”。
-      - 建议创建一个新的 Vault，并选择一个你希望存储所有笔记的文件夹。这个文件夹就是你的“知识库”。
-
-      ### 3. 界面概览
-      Obsidian 的界面主要分为几个区域：
-      - **左侧边栏**: 包含文件浏览器、搜索、标签等核心功能。
-      - **中间编辑区**: 你创建和编辑笔记的主要区域。
-      - **右侧边栏**: 包含反向链接、大纲、标签面板等辅助功能。
-      - **顶部菜单栏**: 提供文件操作、视图切换等选项。
-
-      ### 4. 创建你的第一篇笔记
-      - 在左侧边栏的文件浏览器中，点击“新建笔记”图标（通常是一个带有加号的文档图标）。
-      - 输入笔记标题，例如“我的第一篇笔记”。
-      - 在编辑区输入内容。Obsidian 使用 Markdown 语法，例如：
-        \`\`\`markdown
-        # 我的第一篇笔记
-
-        这是一篇关于 **Obsidian** 的入门笔记。
-
-        - 列表项 1
-        - 列表项 2
-
-        [Obsidian 官网](https://obsidian.md/)
-        \`\`\`
-      - 你会发现 Obsidian 会实时渲染 Markdown，让你看到最终效果。
-
-      ### 5. 探索双向链接
-      Obsidian 的核心魅力在于双向链接。
-      - 在你的笔记中，使用双层方括号 \`[[]]\` 来链接到其他笔记。例如，输入 \`[[第二篇笔记]]\`。
-      - 如果“第二篇笔记”不存在，Obsidian 会自动创建一个。
-      - 点击这个链接，你就可以跳转到“第二篇笔记”。
-      - 在“第二篇笔记”中，你会在右侧边栏的“反向链接”面板中看到“我的第一篇笔记”链接了它。
-
-      恭喜你，你已经成功迈出了Obsidian学习的第一步！
-    `,
-  },
-  {
-    slug: "mastering-bidirectional-links",
-    title: "掌握双向链接：构建你的知识网络",
-    description: "深入了解Obsidian的双向链接功能，以及如何利用它构建强大的知识网络。",
-    date: "2023-11-01",
-    content: `
-      ## 掌握双向链接：构建你的知识网络
-
-      Obsidian 的双向链接是其最核心、最强大的功能之一。它允许你将笔记之间建立起有意义的连接，从而形成一个相互关联的知识网络，而不是孤立的笔记。
-
-      ### 什么是双向链接？
-      传统超链接是单向的：从 A 链接到 B，但 B 不知道 A 链接了它。
-      双向链接意味着：当 A 链接到 B 时，B 也“知道”A 链接了它。在 Obsidian 中，这通过“反向链接”面板体现。
-
-      ### 如何创建双向链接？
-      在任何笔记中，使用双层方括号 \`[[]]\` 来创建链接。
-      - **链接到现有笔记**: 如果你输入 \`[[笔记标题]]\`，并且该标题的笔记已经存在，Obsidian 会自动链接到它。
-      - **创建新笔记并链接**: 如果你输入 \`[[新笔记标题]]\`，而该标题的笔记不存在，Obsidian 会在你的 Vault 中自动创建一个名为“新笔记标题”的空笔记。
-
-      ### 双向链接的优势
-      1.  **发现隐藏的联系**: 当你在阅读一篇笔记时，通过反向链接，你可以立即看到哪些其他笔记提到了它。这有助于你发现之前未曾注意到的知识联系。
-      2.  **促进联想与思考**: 这种非线性的连接方式鼓励你进行联想思考，从不同的角度审视信息，从而产生新的见解。
-      3.  **构建知识网络**: 随着链接的增多，你的笔记不再是独立的个体，而是构成了一个庞大而复杂的知识网络。你可以通过“图谱视图”直观地看到这些连接。
-      4.  **减少信息孤岛**: 避免了笔记散落在各处，难以被再次发现和利用的问题。
-
-      ### 最佳实践
-      - **原子化笔记**: 尽量让每篇笔记只关注一个核心概念或想法。这样更容易在不同笔记之间建立精确的链接。
-      - **多角度链接**: 不要害怕在不同语境下链接同一篇笔记。例如，一篇关于“番茄工作法”的笔记，可以被“时间管理”笔记链接，也可以被“提高专注力”笔记链接。
-      - **利用别名**: 如果笔记标题过长或有多种称呼，可以使用 \`[[笔记标题|别名]]\` 的形式。例如：\`[[番茄工作法|Pomodoro Technique]]\`。
-      - **定期回顾图谱**: Obsidian 的图谱视图是可视化你的知识网络的强大工具。定期查看它可以帮助你发现新的连接机会，并优化你的笔记结构。
-
-      通过熟练运用双向链接，你将能够充分发挥 Obsidian 的潜力，将你的个人知识库打造成一个真正有机的、不断成长的智能系统。
-    `,
-  },
-  {
-    slug: "plugins-and-automation",
-    title: "Obsidian 插件与自动化工作流",
-    description: "探索Obsidian的强大插件生态系统，学习如何利用插件和自动化提升你的笔记效率。",
-    date: "2023-11-15",
-    content: `
-      ## Obsidian 插件与自动化工作流
-
-      Obsidian 的强大之处不仅在于其核心功能，更在于其活跃的社区和丰富的插件生态系统。通过安装和配置合适的插件，你可以极大地扩展 Obsidian 的功能，并自动化许多日常任务。
-
-      ### 1. 社区插件的安装与管理
-      - **进入设置**: 点击左下角的齿轮图标进入“设置”。
-      - **社区插件**: 在左侧菜单中选择“社区插件”。
-      - **关闭安全模式**: 首次使用社区插件时，你需要关闭“安全模式”。请注意，安装未知来源的插件可能存在风险，请谨慎选择。
-      - **浏览与安装**: 点击“浏览”按钮，你可以看到一个庞大的插件列表。你可以通过搜索、排序和筛选来找到你需要的插件。
-      - **启用插件**: 安装完成后，回到“社区插件”页面，找到你安装的插件，并点击旁边的开关按钮启用它。
-
-      ### 2. 推荐的常用插件
-      以下是一些广受欢迎且功能强大的插件，可以作为你探索的起点：
-
-      - **Dataview**: 允许你像数据库一样查询和展示你的笔记数据。你可以用它来创建任务列表、项目概览、读书清单等。
-      - **Templater**: 强大的模板引擎，可以自动化笔记创建过程，插入日期、时间、变量等。
-      - **Calendar**: 在侧边栏显示一个日历，方便你快速创建或跳转到每日笔记。
-      - **Excalidraw**: 在 Obsidian 中直接绘制手绘风格的图表和草图，并与笔记内容无缝集成。
-      - **Tasks**: 强大的任务管理插件，支持在笔记中创建、管理和查询任务。
-      - **Advanced Tables**: 增强 Markdown 表格的编辑体验，使其更易于创建和维护。
-
-      ### 3. 自动化工作流示例
-      结合插件，你可以构建各种自动化工作流：
-
-      - **每日回顾**: 使用 Templater 插件创建一个每日笔记模板，自动插入日期、待办事项列表、回顾问题等。
-      - **项目管理**: 利用 Dataview 插件，在一个项目概览笔记中自动汇总所有与该项目相关的任务、会议记录和文件。
-      - **文献管理**: 结合 Zotero 等文献管理工具，通过插件将文献笔记自动导入 Obsidian，并建立双向链接。
-      - **闪卡复习**: 使用 Spaced Repetition 插件将笔记内容转化为闪卡，进行间隔重复复习。
-
-      ### 4. 注意事项
-      - **插件冲突**: 某些插件之间可能会存在冲突，导致功能异常。如果遇到问题，尝试禁用最近安装的插件。
-      - **性能影响**: 安装过多或过于复杂的插件可能会影响 Obsidian 的性能。
-      - **定期更新**: 插件会不断更新，修复 bug 并添加新功能。定期检查并更新你的插件。
-
-      通过合理利用 Obsidian 的插件生态，你将能够根据自己的需求，将 Obsidian 打造成一个高度个性化和自动化的知识管理中心。
-    `,
-  },
-];
+const postsDirectory = path.join(process.cwd(), "src/posts");
 
 export function getAllBlogPosts(): BlogPost[] {
-  return blogPosts;
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    return {
+      slug,
+      title: data.title,
+      description: data.description,
+      date: data.date,
+      content,
+    } as BlogPost;
+  });
+
+  // Sort posts by date in descending order
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug);
+  const fullPath = path.join(postsDirectory, `${slug}.md`);
+  if (!fs.existsSync(fullPath)) {
+    return undefined;
+  }
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  return {
+    slug,
+    title: data.title,
+    description: data.description,
+    date: data.date,
+    content,
+  } as BlogPost;
 }
