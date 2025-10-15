@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { GithubCTAButtons } from "@/components/github-cta-buttons";
+import { GithubCTAButtons }
+from "@/components/github-cta-buttons";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { BookOpenText, Brain, Sparkles, Lightbulb, Workflow, GraduationCap, Newspaper } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle"; // 导入 ThemeToggle
@@ -10,8 +11,8 @@ import Link from "next/link";
 
 export function LandingPageContent() {
   // TODO: 请将这些占位符替换为你的实际链接
-  const githubRepoUrl = "https://github.com/YOUR_GITHUB_REPO_URL";
-  const downloadLink = "https://github.com/YOUR_GITHUB_REPO_URL/archive/refs/heads/main.zip"; // 示例：直接下载主分支zip
+  const githubRepoUrl = "https://github.com/Neonity2020/ob-tutorial";
+  const downloadLink = "https://github.com/Neonity2020/ob-tutorial/archive/refs/heads/main.zip"; // 示例：直接下载主分支zip
 
   const features = [
     {
