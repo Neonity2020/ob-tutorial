@@ -9,6 +9,7 @@ import { Home } from "lucide-react";
 export const metadata = {
   title: "教程博客 - Obsidian 零基础入门教程 Vault",
   description: "Obsidian 零基础入门教程的博客文章列表。",
+  keywords: ["Obsidian", "Neonity", "NEONITY", "双向链接", "NextJS", "React", "PKM", "独立开发", "超级个体", "Obsidian教程", "知识管理", "Markdown"],
 };
 
 export default function BlogPage() {
