@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug"; // 重新导入 rehypeSlug
+import rehypeSlug from "rehype-slug";
 import { BlogPostTOC } from "@/components/blog/blog-post-toc";
 
 interface BlogPostPageProps {
@@ -63,8 +63,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </div>
             <Separator className="mb-8" />
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}> {/* 重新添加 rehypeSlug */}
-              {post.content}
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
+              {post.content.trim()} {/* 添加 .trim() */}
             </ReactMarkdown>
           </article>
           <div className="mt-12 flex justify-between items-center">
