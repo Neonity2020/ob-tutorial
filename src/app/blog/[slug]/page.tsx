@@ -5,6 +5,8 @@ import { Separator } from "@/components/ui/separator";
 import { CalendarDays } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown"; // 导入 ReactMarkdown
+import remarkGfm from "remark-gfm"; // 导入 remarkGfm，支持 GitHub Flavored Markdown
 
 interface BlogPostPageProps {
   params: {
@@ -48,8 +50,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           {post.date}
         </p>
         <Separator className="mb-8" />
-        {/* For simplicity, content is rendered as plain text. For rich markdown, a markdown renderer library would be needed. */}
-        <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br />') }} />
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {post.content}
+        </ReactMarkdown>
       </article>
       <div className="mt-12 text-center">
         <Button asChild>
