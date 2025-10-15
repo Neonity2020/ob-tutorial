@@ -5,10 +5,11 @@ import { Separator } from "@/components/ui/separator";
 import { CalendarDays, Home, ArrowLeft, ArrowRight, User } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
+// import ReactMarkdown from "react-markdown"; // 移除 ReactMarkdown 导入
+// import remarkGfm from "remark-gfm"; // 移除 remarkGfm 导入
+// import rehypeSlug from "rehype-slug"; // 移除 rehypeSlug 导入
 import { BlogPostTOC } from "@/components/blog/blog-post-toc";
+import { MarkdownRenderer } from "@/components/blog/markdown-renderer"; // 导入新的 MarkdownRenderer
 
 interface BlogPostPageProps {
   params: {
@@ -63,9 +64,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </div>
             <Separator className="mb-8" />
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
-              {post.content.trim()} {/* 添加 .trim() */}
-            </ReactMarkdown>
+            <MarkdownRenderer content={post.content} /> {/* 使用 MarkdownRenderer */}
           </article>
           <div className="mt-12 flex justify-between items-center">
             {previousPost ? (
