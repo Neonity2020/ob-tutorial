@@ -1,12 +1,12 @@
 ---
-slug: meta-course
-title: 站点构建思路：使用 Dyad AI 零代码构建
+slug: building-this-site-with-dyad
+title: 使用 Dyad AI 零代码构建本站点
 description: 了解如何使用 Dyad AI 零代码构建此静态站点，以及使用 Dyad 的技巧和所需前置知识。
 date: 2025-10-16
-sortOrder: 1 # 新增：设置排序为1，使其显示在最前面
-author: NEONITY # 新增：作者信息
+sortOrder: 1
+author: NEONITY
 ---
-## 使用 Dyad AI 零代码构建此站点
+## 使用 Dyad AI 零代码构建本站点
 
 这个 Obsidian 零基础入门教程 Vault 站点是一个完全由 Dyad AI 辅助构建的静态站点。这意味着在整个开发过程中，我几乎没有手写任何一行代码，所有的前端和全栈开发任务都通过与 Dyad AI 的对话完成。
 
