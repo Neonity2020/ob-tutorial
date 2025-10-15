@@ -83,7 +83,7 @@ export function LandingPageContent() {
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">核心特性</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="flex flex-col items-center p-4 text-center h-full">
+            <Card key={index} className="flex flex-col items-center text-left  h-full">
               <CardHeader className="pb-4">
                 <feature.icon className="h-10 w-10 text-primary mb-4" />
                 <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
