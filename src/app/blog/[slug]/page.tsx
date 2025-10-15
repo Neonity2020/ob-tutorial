@@ -2,7 +2,7 @@ import React from "react";
 import { getBlogPostWithNavigation, getAllBlogPosts } from "@/lib/blog"; // 更改为导入 getBlogPostWithNavigation
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays, Home, ArrowLeft, ArrowRight } from "lucide-react"; // 导入 ArrowLeft 和 ArrowRight
+import { CalendarDays, Home, ArrowLeft, ArrowRight, User } from "lucide-react"; // 导入 User 图标
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
@@ -45,10 +45,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <article className="prose dark:prose-invert prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-primary prose-a:hover:underline">
         <h1 className="text-4xl font-bold text-foreground mb-2">{post.title}</h1>
-        <p className="flex items-center text-sm text-muted-foreground mb-6">
-          <CalendarDays className="h-4 w-4 mr-2" />
-          {post.date}
-        </p>
+        <div className="flex flex-wrap items-center gap-x-4 text-sm text-muted-foreground mb-6">
+          <p className="flex items-center">
+            <CalendarDays className="h-4 w-4 mr-2" />
+            {post.date}
+          </p>
+          {post.author && (
+            <p className="flex items-center">
+              <User className="h-4 w-4 mr-2" />
+              {post.author}
+            </p>
+          )}
+        </div>
         <Separator className="mb-8" />
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {post.content}

@@ -22,6 +22,7 @@ export function getAllBlogPosts(): BlogPost[] {
       date: format(new Date(data.date), 'yyyy年MM月dd日'), 
       content,
       sortOrder: data.sortOrder || undefined, // 读取 sortOrder 属性
+      author: data.author || undefined, // 读取 author 属性
     } as BlogPost;
   });
 
@@ -55,6 +56,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
     date: format(new Date(data.date), 'yyyy年MM月dd日'),
     content,
     sortOrder: data.sortOrder || undefined, // 读取 sortOrder 属性
+    author: data.author || undefined, // 读取 author 属性
   } as BlogPost;
 }
 
