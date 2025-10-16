@@ -12,9 +12,9 @@ import { BlogPostTOC } from "@/components/blog/blog-post-toc";
 import { MarkdownRenderer } from "@/components/blog/markdown-renderer"; // 导入新的 MarkdownRenderer
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -25,7 +25,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const { currentPost: post } = getBlogPostWithNavigation(params.slug);
+  const { slug } = await params;
+  const { currentPost: post } = getBlogPostWithNavigation(slug);
   if (!post) {
     return {
       title: "文章未找到",
@@ -37,8 +38,9 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const { currentPost: post, previousPost, nextPost } = getBlogPostWithNavigation(params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const { currentPost: post, previousPost, nextPost } = getBlogPostWithNavigation(slug);
 
   if (!post) {
     notFound();

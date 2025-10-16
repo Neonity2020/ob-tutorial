@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPostEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date).toISOString().split('T')[0], // 使用文章日期作为最后修改日期
+    lastModified: new Date().toISOString().split('T')[0], // 使用当前日期作为最后修改日期
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
