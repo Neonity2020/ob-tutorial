@@ -1,3 +1,5 @@
+此指南网站使用 Dyad AI / NextJS 15 构建，供爱好者开源学习使用。如对您有启发，请不吝给予一个 Star ！这对我非常重要，谢谢🙏
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
