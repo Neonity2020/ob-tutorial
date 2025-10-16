@@ -53,20 +53,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 左侧侧边栏区域 - 仅在大屏幕显示，悬停时独立滚动 */}
-        <aside className="hidden lg:block lg:w-1/4 lg:order-1 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
+        <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 lg:order-1 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
+          <div className="mb-4">
+            <Link href="/">
+              <Button variant="ghost" className="w-full justify-start gap-2">
+                <Home className="h-4 w-4" />
+                返回首页
+              </Button>
+            </Link>
+          </div>
           <BlogSidebar posts={allPosts} currentSlug={slug} />
         </aside>
         
         {/* 主内容区域 */}
-        <main className="lg:w-1/2 lg:order-2">
+        <main className="lg:flex-[2_1_0%] lg:min-w-0 lg:order-2">
           {/* 移动端菜单按钮 */}
           <div className="mb-6 lg:hidden">
             <MobileMenu posts={allPosts} currentSlug={slug} content={post.content} />
           </div>
           
-          <article className="prose dark:prose-invert prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-primary prose-a:hover:underline max-w-none">
+          <article className="prose dark:prose-invert prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-primary prose-a:hover:underline max-w-none min-w-0">
             <h1 className="text-4xl font-bold text-foreground mb-2">{post.title}</h1>
-            <div className="flex flex-wrap items-center gap-x-4 text-sm text-muted-foreground mb-6">
+          <div className="flex flex-wrap items-center gap-x-4 text-sm text-muted-foreground mb-6 min-w-0">
               <p className="flex items-center">
                 <CalendarDays className="h-4 w-4 mr-2" />
                 {post.date}
@@ -108,18 +116,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="w-[100px]" />
             )}
           </div>
-          <div className="mt-4 flex justify-center">
-            <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2">
-                <Home className="h-4 w-4" />
-                返回首页
-              </Button>
-            </Link>
-          </div>
+          
         </main>
 
         {/* 右侧目录区域 - 仅在大屏幕显示，悬停时独立滚动 */}
-        <aside className="hidden lg:block lg:w-1/4 lg:order-3 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
+        <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 lg:order-3 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
           <BlogPostTOC content={post.content} />
         </aside>
       </div>

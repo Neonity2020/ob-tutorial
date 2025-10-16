@@ -26,23 +26,16 @@ export function MobileMenu({ posts, currentSlug, content }: MobileMenuProps) {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-80 sm:w-96 max-h-[100dvh] overflow-y-auto overscroll-contain">
-        <SheetHeader>
-          <SheetTitle className="text-left">
-            {currentSlug ? "文章导航" : "博客导航"}
-          </SheetTitle>
-        </SheetHeader>
         <div className="mt-6 space-y-6 pb-8">
           {/* 如果是文章页面且有内容，显示目录 */}
           {currentSlug && content && (
             <div>
-              <h3 className="text-lg font-semibold mb-4">文章目录</h3>
               <BlogPostTOC content={content} />
             </div>
           )}
           
           {/* 博客侧边栏 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">博客导航</h3>
             <BlogSidebar posts={posts} currentSlug={currentSlug} />
           </div>
         </div>

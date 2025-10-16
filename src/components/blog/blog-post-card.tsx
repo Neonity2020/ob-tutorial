@@ -17,10 +17,10 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ post }: BlogPostCardProps) {
   return (
-    <Link href={`/blog/${post.slug}`} className="block h-full">
-      <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-200 ease-in-out">
+    <Link href={`/blog/${post.slug}`} className="block h-full group">
+      <Card className="flex flex-col h-full transition-all duration-200 ease-out group-hover:shadow-xl group-hover:-translate-y-0.5 group-hover:ring-1 group-hover:ring-primary/20">
         <CardHeader className="pb-2 flex-grow">
-          <CardTitle className="text-xl font-semibold">{post.title}</CardTitle>
+          <CardTitle className="text-xl font-semibold transition-colors group-hover:text-primary">{post.title}</CardTitle>
           <div className="flex items-center text-sm text-muted-foreground mt-1">
             <CalendarDays className="h-4 w-4 mr-2" />
             {post.date}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OB Tutorial Logo (SVG)
+  - Monogram: stylized O/B
+  - Wordmark: Tutorial
+  - Uses currentColor so it inherits text color; customize via CSS fill
+  - Scales cleanly at any size
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 160" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">OB Tutorial</title>
+  <desc id="logoDesc">Elegant monogram OB with wordmark Tutorial for OB Tutorial</desc>
+
+  <defs>
+    <!-- Gentle vertical gradient, can be overridden by fill="currentColor" on parent -->
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="currentColor" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="currentColor" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Subtle shadow for depth (optional) -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset dx="0" dy="1" result="offset"/>
+      <feMerge>
+        <feMergeNode in="offset"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Monogram container -->
+  <g transform="translate(24,24)" filter="url(#softShadow)">
+    <!-- Outer rounded plate -->
+    <rect x="0" y="0" width="112" height="112" rx="20" ry="20" fill="none" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+
+    <!-- Stylized O (ring) -->
+    <circle cx="44" cy="56" r="30" fill="none" stroke="url(#g)" stroke-width="10"/>
+
+    <!-- Stylized B (vertical + two bowls) -->
+    <g transform="translate(62,26)">
+      <!-- Spine -->
+      <rect x="0" y="0" width="8" height="60" rx="4" fill="currentColor"/>
+      <!-- Upper bowl -->
+      <path d="M8,0 h16 a14,14 0 0 1 0,28 H8 Z" fill="currentColor" opacity="0.92"/>
+      <!-- Lower bowl -->
+      <path d="M8,32 h16 a14,14 0 0 1 0,28 H8 Z" fill="currentColor" opacity="0.92"/>
+    </g>
+  </g>
+
+  <!-- Wordmark "OB Tutorial" (crafted paths for elegance and reliability) -->
+  <!-- The word "OB" is intentionally omitted here since the monogram represents it; only "Tutorial" is shown as wordmark. -->
+  <g transform="translate(164,104)" fill="currentColor">
+    <!-- Elegant small caps-ish "Tutorial" constructed with simple paths for portability -->
+    <!-- T -->
+    <path d="M0 -44 H36 V-36 H22 V0 H14 V-36 H0 Z"/>
+    <!-- u -->
+    <path d="M44 -22 c0,-14 8,-22 20,-22 6,0 11,2 14,5 V-44 h8 V0 h-8 v-5 c-3,3 -8,5 -14,5 -12,0 -20,-8 -20,-22 Z m8 0 c0,9 5,14 12,14 8,0 14,-5 14,-14 0,-9 -6,-14 -14,-14 -7,0 -12,5 -12,14 Z"/>
+    <!-- t -->
+    <path d="M108 -44 h8 v-12 h8 v12 h12 v8 h-12 V-9 c0,5 2,7 7,7 h5 V6 h-7 c-9,0 -13,-4 -13,-13 v-29 h-8 Z"/>
+    <!-- o -->
+    <path d="M154 -22 c0,-14 11,-22 24,-22 13,0 24,8 24,22 0,14 -11,22 -24,22 -13,0 -24,-8 -24,-22 Z m8 0 c0,9 7,14 16,14 9,0 16,-5 16,-14 0,-9 -7,-14 -16,-14 -9,0 -16,5 -16,14 Z"/>
+    <!-- r -->
+    <path d="M212 -44 h8 v8 c3,-6 8,-8 15,-8 h3 v9 h-4 c-9,0 -14,5 -14,16 V0 h-8 Z"/>
+    <!-- i -->
+    <path d="M244 -44 h8 V0 h-8 Z M244 -54 h8 v-8 h-8 Z"/>
+    <!-- a -->
+    <path d="M260 -22 c0,-13 9,-22 23,-22 6,0 11,2 14,5 v-5 h8 V0 h-8 v-5 c-3,3 -8,5 -14,5 -14,0 -23,-9 -23,-22 Z m8 0 c0,9 6,14 15,14 8,0 14,-5 14,-14 0,-9 -6,-14 -14,-14 -9,0 -15,5 -15,14 Z"/>
+    <!-- l -->
+    <path d="M324 -64 h8 V0 h-8 Z"/>
+  </g>
+
+  <!-- Optional divider line between monogram and wordmark -->
+  <line x1="148" y1="24" x2="148" y2="136" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+
+</svg>
+
+

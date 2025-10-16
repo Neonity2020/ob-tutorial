@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { CalendarDays, Search, BookOpen, Tag } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
+import Image from "next/image";
 
 interface BlogSidebarProps {
   posts: BlogPost[];
@@ -40,7 +41,21 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
   }, {} as Record<string, number>);
 
   return (
-    <aside className="w-full lg:w-80 space-y-6">
+    <aside className="w-full min-w-0 space-y-6">
+      {/* Logo 区域 */}
+      <div className="flex justify-center mb-6">
+        <Link href="/" className="group">
+          <div className="relative w-32 h-16 text-primary group-hover:text-primary/80 transition-colors">
+            <Image
+              src="/ob-tutorial-logo.svg"
+              alt="OB Tutorial"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </Link>
+      </div>
+
       {/* 搜索框 */}
       <Card>
         <CardHeader>

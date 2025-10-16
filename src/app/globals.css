@@ -137,3 +137,28 @@
     background-image: radial-gradient(at top, hsl(var(--background)) 0%, hsl(var(--background)) 50%, hsl(var(--secondary)) 100%);
   }
 }
+
+@layer utilities {
+  /* Hide scrollbars by default; show on hover (WebKit + Firefox) */
+  .scrollbar-hover {
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hover::-webkit-scrollbar {
+    width: 0; /* WebKit */
+    height: 0;
+  }
+  .scrollbar-hover:hover {
+    scrollbar-width: thin; /* Firefox */
+  }
+  .scrollbar-hover:hover::-webkit-scrollbar {
+    width: 8px; /* WebKit */
+    height: 8px;
+  }
+  .scrollbar-hover:hover::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground));
+    border-radius: 9999px;
+  }
+  .scrollbar-hover:hover::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

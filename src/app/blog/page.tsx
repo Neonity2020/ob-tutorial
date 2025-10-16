@@ -21,7 +21,7 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 主内容区域 */}
-        <main className="lg:w-3/4">
+        <main className="lg:flex-[3_1_0%] lg:min-w-0">
           <div className="mb-8 flex items-center justify-between">
             <Link href="/">
               <Button variant="ghost" className="flex items-center gap-2">
@@ -47,7 +47,7 @@ export default function BlogPage() {
         </main>
 
         {/* 侧边栏 - 仅在大屏幕显示，悬停时独立滚动 */}
-        <aside className="hidden lg:block lg:w-1/4 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
+        <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
           <BlogSidebar posts={posts} />
         </aside>
       </div>
