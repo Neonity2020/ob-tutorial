@@ -1,6 +1,8 @@
 import React from "react";
 import { getAllBlogPosts } from "@/lib/blog";
 import { BlogPostCard } from "@/components/blog/blog-post-card";
+import { BlogSidebar } from "@/components/blog/blog-sidebar";
+import { MobileMenu } from "@/components/blog/mobile-menu";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -16,26 +18,38 @@ export default function BlogPage() {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <div className="mb-8">
-        <Link href="/"> {/* Link 包裹 Button */}
-          <Button variant="ghost" className="flex items-center gap-2"> {/* 移除 asChild */}
-            <Home className="h-4 w-4" />
-            返回首页
-          </Button>
-        </Link>
-      </div>
+    <div className="container mx-auto px-4 py-12">
+      <div className="flex flex-col lg:flex-row lg:gap-8">
+        {/* 主内容区域 */}
+        <main className="lg:w-3/4">
+          <div className="mb-8 flex items-center justify-between">
+            <Link href="/">
+              <Button variant="ghost" className="flex items-center gap-2">
+                <Home className="h-4 w-4" />
+                返回首页
+              </Button>
+            </Link>
+            {/* 移动端菜单按钮 */}
+            <MobileMenu posts={posts} />
+          </div>
 
-      <h1 className="text-4xl font-bold text-center mb-4">教程博客</h1>
-      <p className="text-lg text-muted-foreground text-center mb-8">
-        在这里，你可以找到关于 Obsidian 基础、高级技巧和工作流的教程文章。
-      </p>
-      <Separator className="mb-12" />
+          <h1 className="text-4xl font-bold text-center mb-4">教程博客</h1>
+          <p className="text-lg text-muted-foreground text-center mb-8">
+            在这里，你可以找到关于 Obsidian 基础、高级技巧和工作流的教程文章。
+          </p>
+          <Separator className="mb-12" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {posts.map((post) => (
-          <BlogPostCard key={post.slug} post={post} />
-        ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {posts.map((post) => (
+              <BlogPostCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </main>
+
+        {/* 侧边栏 - 仅在大屏幕显示 */}
+        <aside className="hidden lg:block lg:w-1/4 mt-8 lg:mt-0">
+          <BlogSidebar posts={posts} />
+        </aside>
       </div>
     </div>
   );

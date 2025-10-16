@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 // import rehypeSlug from "rehype-slug"; // 移除 rehypeSlug 导入
 import { BlogPostTOC } from "@/components/blog/blog-post-toc";
 import { MarkdownRenderer } from "@/components/blog/markdown-renderer"; // 导入新的 MarkdownRenderer
+import { BlogSidebar } from "@/components/blog/blog-sidebar";
+import { MobileMenu } from "@/components/blog/mobile-menu";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -41,6 +43,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const { currentPost: post, previousPost, nextPost } = getBlogPostWithNavigation(slug);
+  const allPosts = getAllBlogPosts();
 
   if (!post) {
     notFound();
@@ -49,8 +52,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row lg:gap-8">
+        {/* 左侧侧边栏区域 - 仅在大屏幕显示 */}
+        <aside className="hidden lg:block lg:w-1/4 lg:order-1 lg:sticky lg:top-8 lg:h-fit">
+          <BlogSidebar posts={allPosts} currentSlug={slug} />
+        </aside>
+        
         {/* 主内容区域 */}
-        <div className="lg:w-3/4">
+        <main className="lg:w-1/2 lg:order-2">
+          {/* 移动端菜单按钮 */}
+          <div className="mb-6 lg:hidden">
+            <MobileMenu posts={allPosts} currentSlug={slug} content={post.content} />
+          </div>
+          
           <article className="prose dark:prose-invert prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-primary prose-a:hover:underline max-w-none">
             <h1 className="text-4xl font-bold text-foreground mb-2">{post.title}</h1>
             <div className="flex flex-wrap items-center gap-x-4 text-sm text-muted-foreground mb-6">
@@ -103,9 +116,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Button>
             </Link>
           </div>
-        </div>
-        {/* 目录区域 */}
-        <aside className="lg:w-1/4 mt-8 lg:mt-0">
+        </main>
+
+        {/* 右侧目录区域 - 仅在大屏幕显示 */}
+        <aside className="hidden lg:block lg:w-1/4 lg:order-3 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:h-fit">
           <BlogPostTOC content={post.content} />
         </aside>
       </div>

@@ -20,27 +20,29 @@ export function BlogPostTOC({ content }: BlogPostTOCProps) {
 
   useEffect(() => {
     const extractedHeadings: Heading[] = [];
-    const headingRegex = /^(#{1,3})\s(.+)$/gm;
-    let match;
-    let headingIndex = 0; // 用于处理重复slug的索引
+    const idCounts: Record<string, number> = {}; // 跟踪每个ID的使用次数
 
+    // 处理 Markdown 标题 (# 开头的)
+    const headingRegex = /^(#{1,4})\s(.+)$/gm;
+    let match;
     while ((match = headingRegex.exec(content)) !== null) {
       const level = match[1].length;
       const text = match[2].trim();
-      let id = slugify(text);
+      const baseId = slugify(text);
       
       // 确保ID在当前提取的列表中是唯一的
-      let uniqueId = id;
-      let counter = 1;
-      while (extractedHeadings.some(h => h.id === uniqueId)) {
-        uniqueId = `${id}-${counter}`;
-        counter++;
+      let uniqueId = baseId;
+      if (idCounts[baseId]) {
+        idCounts[baseId]++;
+        uniqueId = `${baseId}-${idCounts[baseId]}`;
+      } else {
+        idCounts[baseId] = 1;
       }
-      id = uniqueId;
 
-      extractedHeadings.push({ level, text, id });
-      headingIndex++;
+      extractedHeadings.push({ level, text, id: uniqueId });
     }
+
+
     setHeadings(extractedHeadings);
   }, [content]);
 
@@ -89,6 +91,7 @@ export function BlogPostTOC({ content }: BlogPostTOCProps) {
             "text-sm",
             heading.level === 2 && "ml-0",
             heading.level === 3 && "ml-4",
+            heading.level === 4 && "ml-8",
             activeId === heading.id ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground"
           )}>
             <Link href={`#${heading.id}`} className="block transition-colors">
