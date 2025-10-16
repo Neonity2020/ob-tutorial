@@ -52,8 +52,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col lg:flex-row lg:gap-8">
-        {/* 左侧侧边栏区域 - 仅在大屏幕显示 */}
-        <aside className="hidden lg:block lg:w-1/4 lg:order-1 lg:sticky lg:top-8 lg:h-fit">
+        {/* 左侧侧边栏区域 - 仅在大屏幕显示，悬停时独立滚动 */}
+        <aside className="hidden lg:block lg:w-1/4 lg:order-1 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
           <BlogSidebar posts={allPosts} currentSlug={slug} />
         </aside>
         
@@ -118,8 +118,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </main>
 
-        {/* 右侧目录区域 - 仅在大屏幕显示 */}
-        <aside className="hidden lg:block lg:w-1/4 lg:order-3 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:h-fit">
+        {/* 右侧目录区域 - 仅在大屏幕显示，悬停时独立滚动 */}
+        <aside className="hidden lg:block lg:w-1/4 lg:order-3 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
           <BlogPostTOC content={post.content} />
         </aside>
       </div>

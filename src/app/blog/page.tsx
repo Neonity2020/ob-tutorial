@@ -46,8 +46,8 @@ export default function BlogPage() {
           </div>
         </main>
 
-        {/* 侧边栏 - 仅在大屏幕显示 */}
-        <aside className="hidden lg:block lg:w-1/4 mt-8 lg:mt-0">
+        {/* 侧边栏 - 仅在大屏幕显示，悬停时独立滚动 */}
+        <aside className="hidden lg:block lg:w-1/4 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
           <BlogSidebar posts={posts} />
         </aside>
       </div>
