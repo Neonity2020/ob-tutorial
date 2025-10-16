@@ -1,5 +1,6 @@
 本仓库是 Obsidian 零基础入门教程（ob-tutorial.org）的配套仓库，旨在帮助非编程人员快速入门Obsidian
 
+非常感谢关注我的网站和您的Star！
 
 - [Obsidian零基础入门](https://ob-tutorial.org)
 - [GitHub仓库地址](https://github.com/Neonity2020/ob-tutorial)

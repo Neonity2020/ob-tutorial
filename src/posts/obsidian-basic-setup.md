@@ -3,7 +3,7 @@ slug: obsidian-basic-setup
 title: Obsidian 基础设置与界面介绍
 description: 本教程将引导你完成Obsidian的初始设置，并熟悉其用户界面。
 date: 2025-10-16
-sortOrder: 2 # 新增：设置排序为2，使其显示在meta-course之后
+sortOrder: 2 # 新增：设置排序为2，使其显示在Dyad AI之后
 author: NEONITY # 新增：作者信息
 ---
 ## 欢迎来到 Obsidian 的世界！
@@ -19,6 +19,9 @@ Obsidian 是一款强大的知识管理工具，它以本地 Markdown 文件为�
 - 建议创建一个新的 Vault，并选择一个你希望存储所有笔记的文件夹。这个文件夹就是你的“知识库”。
 
 ### 3. 界面概览
+
+![OB的界面](https://ik.imagekit.io/neonity/OGs/ob-starter.webp?updatedAt=1760602884060)
+
 Obsidian 的界面主要分为几个区域：
 - **左侧边栏**: 包含文件浏览器、搜索、标签等核心功能。
 - **中间编辑区**: 你创建和编辑笔记的主要区域。

@@ -38,8 +38,23 @@
               "icon": "lucide-git-fork",
               "title": "关系图谱"
             }
+          },
+          {
+            "id": "394f0824740a2a51",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.ob-tutorial.org/",
+                "title": "Obsidian 零基础入门教程 Vault",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Obsidian 零基础入门教程 Vault"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,7 +199,7 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "4ea67df9f19a0726",
+  "active": "394f0824740a2a51",
   "lastOpenFiles": [
     "欢迎使用 Obsidian Tutorial ！.md",
     "未命名.md",
