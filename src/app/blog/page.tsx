@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 
 export const metadata = {
-  title: "教程博客 - Obsidian 零基础入门教程 Vault",
-  description: "Obsidian 零基础入门教程的博客文章列表。",
-  keywords: ["Obsidian", "Neonity", "NEONITY", "双向链接", "NextJS", "React", "PKM", "独立开发", "超级个体", "Obsidian教程", "知识管理", "Markdown"],
+  title: "Obsidian教程博客",
+  description: "Obsidian 零基础入门教程的博客文章列表。从Obsidian基础设置到高级技巧，包含双向链接、插件配置、工作流优化等实用教程。",
+  keywords: ["Obsidian教程", "Obsidian博客", "知识管理教程", "PKM教程", "双向链接教程", "Obsidian插件", "Obsidian工作流", "Markdown教程", "个人知识库", "Obsidian入门指南"],
 };
 
 export default function BlogPage() {
