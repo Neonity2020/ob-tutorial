@@ -6,9 +6,11 @@ date: 2025-10-16
 sortOrder: 1
 author: NEONITY
 ---
+![Dyad](https://ik.imagekit.io/neonity/OGs/dyad.webp?updatedAt=1760597448119)
+
 ## 使用 Dyad AI 零代码构建本站点
 
-这个 Obsidian 零基础入门教程 Vault 站点是一个完全由 Dyad AI 辅助构建的静态站点。这意味着在整个开发过程中，我几乎没有手写任何一行代码，所有的前端和全栈开发任务都通过与 Dyad AI 的对话完成。
+这个 Obsidian 零基础入门教程 Vault 站点是一个完全由 [Dyad AI](https://www.dyad.sh/) 辅助构建的静态站点。这意味着在整个开发过程中，我几乎没有手写任何一行代码，所有的前端和全栈开发任务都通过与 Dyad AI 的对话完成。
 
 ### 1. Dyad AI：强大的前端/全栈构建工具
 

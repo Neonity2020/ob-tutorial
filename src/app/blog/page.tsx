@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+import PrefetchPosts from "@/components/blog/prefetch-posts";
 
 export const metadata = {
   title: "Obsidian教程博客",
@@ -17,8 +18,12 @@ export const metadata = {
 export default function BlogPage() {
   const posts = getAllBlogPosts();
 
+  // 在客户端组件中预抓取若干博文页面（提升首次打开速度）
+  // PrefetchPosts 会在客户端调用 next/navigation 的 router.prefetch
+  // 仅预抓取路由代码与数据，不影响服务器渲染
   return (
     <div className="container mx-auto px-4 py-12">
+      <PrefetchPosts posts={posts} />
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 主内容区域 */}
         <main className="lg:flex-[3_1_0%] lg:min-w-0">
