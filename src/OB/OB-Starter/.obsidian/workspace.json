@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+                "file": "VS Code.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。"
+              "title": "VS Code"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+                "file": "VS Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。 的反向链接列表"
+              "title": "VS Code 的反向链接列表"
             }
           },
           {
@@ -123,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+                "file": "VS Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。 的出链列表"
+              "title": "VS Code 的出链列表"
             }
           },
           {
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+                "file": "VS Code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。 的大纲"
+              "title": "VS Code 的大纲"
             }
           },
           {
@@ -203,15 +203,16 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "627d179d3c29c631",
+  "active": "6c03d3440a789aa2",
   "lastOpenFiles": [
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
-    "04 “为记个笔记，我还要学前端编程？”.md",
-    "01 欢迎使用 Obsidian Tutorial ！.md",
-    "02 从0开始Obsidian探索之旅.md",
     "03 深入理解Obsidian.md",
+    "VS Code.md",
+    "04 “为记个笔记，我还要学前端编程？”.md",
+    "02 从0开始Obsidian探索之旅.md",
+    "01 欢迎使用 Obsidian Tutorial ！.md",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
     "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
     "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
     "assets",
     "assets/Pasted image 20251017143536.png",
