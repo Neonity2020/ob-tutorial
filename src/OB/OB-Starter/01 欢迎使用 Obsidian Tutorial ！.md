@@ -49,6 +49,10 @@
 
 - 这属于这个世界上一个同类问题——不必要，但学会了会非常爽
 
+## [[05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？]]
+
+- 让 Obsidian 成为 DeepSeek 的长期记忆
+- 让OB成为AI笔记
 ## 工具&捷径
 
 - [DeepSeek](https://chat.deepseek.com/)
