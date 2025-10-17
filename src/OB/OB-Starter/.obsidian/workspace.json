@@ -27,12 +27,36 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 欢迎使用 Obsidian Tutorial ！.md",
+                "file": "02 从0开始Obsidian探索之旅.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "01 欢迎使用 Obsidian Tutorial ！"
+              "title": "02 从0开始Obsidian探索之旅"
+            }
+          },
+          {
+            "id": "6c03d3440a789aa2",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.ob-tutorial.org/blog/obsidian-basic-setup",
+                "title": "Obsidian 基础设置与界面介绍 | Obsidian 零基础入门教程 Vault",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Obsidian 基础设置与界面介绍 | Obsidian 零基础入门教程 Vault"
             }
           }
         ],
@@ -109,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 欢迎使用 Obsidian Tutorial ！.md",
+                "file": "02 从0开始Obsidian探索之旅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +143,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "01 欢迎使用 Obsidian Tutorial ！ 的反向链接列表"
+              "title": "02 从0开始Obsidian探索之旅 的反向链接列表"
             }
           },
           {
@@ -128,11 +152,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "02 从0开始Obsidian探索之旅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "02 从0开始Obsidian探索之旅 的出链列表"
             }
           },
           {
@@ -156,12 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "02 从0开始Obsidian探索之旅.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "02 从0开始Obsidian探索之旅 的大纲"
             }
           },
           {
@@ -180,12 +206,12 @@
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://www.dyad.sh/",
-                "title": "Dyad | Free, local, open-source AI app builder",
+                "url": "https://www.ob-tutorial.org/blog/building-this-site-with-dyad",
+                "title": "使用 Dyad AI 零代码构建本站点 | Obsidian 零基础入门教程 Vault",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "Dyad | Free, local, open-source AI app builder"
+              "title": "使用 Dyad AI 零代码构建本站点 | Obsidian 零基础入门教程 Vault"
             }
           }
         ],
@@ -208,10 +234,17 @@
   },
   "active": "74b8abf1d6d87059",
   "lastOpenFiles": [
-    "02 从0开始Obsidian探索之旅.md",
     "01 欢迎使用 Obsidian Tutorial ！.md",
-    "04 “为记个笔记，我还要学前端编程？”.md",
+    "02 从0开始Obsidian探索之旅.md",
+    "assets",
+    "assets/Pasted image 20251017143536.png",
     "03 深入理解Obsidian.md",
+    "04 “为记个笔记，我还要学前端编程？”.md",
+    "前端知识概要/NodeJS.md",
+    "前端知识概要/JavaScript.md",
+    "前端知识概要/CSS.md",
+    "前端知识概要/HTML.md",
+    "前端知识概要",
     "未命名.md",
     "欢迎.md"
   ]
