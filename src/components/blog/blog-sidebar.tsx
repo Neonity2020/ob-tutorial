@@ -71,7 +71,13 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
               <Image src="/favicon.svg" alt="Obsidian" fill className="object-contain" />
             </div>
 
-            <span className="font-semibold text-lg leading-none">OB Tutorial</span>
+            {/* 将 "OB Tutorial" 使用更有特色的字体（内联样式作为快速方案） */}
+            <span
+              className="font-semibold text-lg leading-none"
+              style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+            >
+              OB Tutorial
+            </span>
           </div>
         </Link>
 
