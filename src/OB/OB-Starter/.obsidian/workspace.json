@@ -4,57 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "cfd82ef19e2395ad",
-        "type": "tabs",
-        "dimension": 58.13758389261745,
-        "children": [
-          {
-            "id": "71968a6506f34e77",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "欢迎使用 Obsidian Tutorial ！.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "欢迎使用 Obsidian Tutorial ！"
-            }
-          }
-        ]
-      },
-      {
         "id": "fa62d278dbe9883c",
         "type": "tabs",
-        "dimension": 41.86241610738255,
         "children": [
-          {
-            "id": "4ea67df9f19a0726",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
           {
             "id": "394f0824740a2a51",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://www.ob-tutorial.org/",
-                "title": "Obsidian 零基础入门教程 Vault",
-                "mode": "webview"
+                "file": "01 欢迎使用 Obsidian Tutorial ！.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "globe-2",
-              "title": "Obsidian 零基础入门教程 Vault"
+              "icon": "lucide-file",
+              "title": "01 欢迎使用 Obsidian Tutorial ！"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01 欢迎使用 Obsidian Tutorial ！.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "01 欢迎使用 Obsidian Tutorial ！ 的反向链接列表"
             }
           },
           {
@@ -180,13 +148,23 @@
               "icon": "lucide-list",
               "title": "大纲"
             }
+          },
+          {
+            "id": "4ea67df9f19a0726",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 506.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,7 +179,10 @@
   },
   "active": "394f0824740a2a51",
   "lastOpenFiles": [
-    "欢迎使用 Obsidian Tutorial ！.md",
+    "02 从0开始Obsidian探索之旅.md",
+    "03 深入理解Obsidian.md",
+    "04 “为记个笔记，我还要学前端编程？”.md",
+    "01 欢迎使用 Obsidian Tutorial ！.md",
     "未命名.md",
     "欢迎.md"
   ]

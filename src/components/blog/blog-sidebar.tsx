@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BlogPost } from "@/types/blog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Search, BookOpen, Tag } from "lucide-react";
+import { CalendarDays, Search, BookOpen, Tag, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 import Image from "next/image";
@@ -17,6 +17,26 @@ interface BlogSidebarProps {
 
 export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
   const [searchTerm, setSearchTerm] = useState("");
+  // 新增：主题状态
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored === "dark";
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
+
+  const toggleTheme = () => setIsDark(prev => !prev);
 
   // 过滤文章
   const filteredPosts = posts.filter(post =>
@@ -42,8 +62,8 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
 
   return (
     <aside className="w-full min-w-0 space-y-6">
-      {/* Logo 区域 */}
-      <div className="flex justify-center mb-6">
+      {/* Logo 区域（左：返回首页；右：明暗切换） */}
+      <div className="flex items-center justify-between mb-6">
         <Link href="/" className="group">
           <div className="relative w-32 h-16 text-primary group-hover:text-primary/80 transition-colors">
             <Image
@@ -54,6 +74,16 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
             />
           </div>
         </Link>
+
+        {/* 明暗切换按钮 */}
+        <button
+          onClick={toggleTheme}
+          aria-label={isDark ? "切换到浅色模式" : "切换到深色模式"}
+          title={isDark ? "切换到浅色模式" : "切换到深色模式"}
+          className="p-2 rounded-md hover:bg-accent transition-colors flex items-center justify-center"
+        >
+          {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+        </button>
       </div>
 
       {/* 搜索框 */}
