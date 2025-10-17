@@ -62,16 +62,16 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
 
   return (
     <aside className="w-full min-w-0 space-y-6">
-      {/* Logo 区域（左：返回首页；右：明暗切换） */}
+      {/* Logo 区域（左：Obsidian favicon；右：文字，点击 logo 返回首页） */}
       <div className="flex items-center justify-between mb-6">
-        <Link href="/" className="group">
-          <div className="relative w-32 h-16 text-primary group-hover:text-primary/80 transition-colors">
-            <Image
-              src="/ob-tutorial-logo.svg"
-              alt="OB Tutorial"
-              fill
-              className="object-contain"
-            />
+        <Link href="/" className="group" aria-label="返回首页">
+          <div className="flex items-center gap-3 text-primary group-hover:text-primary/80 transition-colors cursor-pointer">
+            {/* 使用 /favicon.svg 作为 logo（可点击） */}
+            <div className="w-8 h-8 relative flex-shrink-0">
+              <Image src="/favicon.svg" alt="Obsidian" fill className="object-contain" />
+            </div>
+
+            <span className="font-semibold text-lg leading-none">OB Tutorial</span>
           </div>
         </Link>
 

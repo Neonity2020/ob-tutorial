@@ -54,14 +54,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 左侧侧边栏区域 - 仅在大屏幕显示，悬停时独立滚动 */}
         <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 lg:order-1 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
-          <div className="mb-4">
-            <Link href="/">
-              <Button variant="ghost" className="w-full justify-start gap-2">
-                <Home className="h-4 w-4" />
-                返回首页
-              </Button>
-            </Link>
-          </div>
           <BlogSidebar posts={allPosts} currentSlug={slug} />
         </aside>
         
