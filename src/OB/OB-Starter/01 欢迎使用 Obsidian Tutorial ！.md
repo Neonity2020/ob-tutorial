@@ -53,6 +53,9 @@
 
 - 让 Obsidian 成为 DeepSeek 的长期记忆
 - 让OB成为AI笔记
+
+##  [[06 使用 Obsidian 记录与DeepSeek的对话]]
 ## 工具&捷径
 
 - [DeepSeek](https://chat.deepseek.com/)
+- [Neonity 的第二大脑|TiddlyWiki](https://wiki.neomatrix.club/)
