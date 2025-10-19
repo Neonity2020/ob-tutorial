@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07.md",
+                "file": "01 欢迎使用 Obsidian Tutorial ！.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "07"
+              "title": "01 欢迎使用 Obsidian Tutorial ！"
             }
           }
         ]
@@ -198,11 +198,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 557.5
+    "width": 499.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,33 +215,33 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "394f0824740a2a51",
+  "active": "f19f1c8a2c6dff5e",
   "lastOpenFiles": [
+    "01 欢迎使用 Obsidian Tutorial ！.md",
+    "02 从0开始Obsidian探索之旅.md",
+    "03 深入理解Obsidian.md",
+    "assets/06 使用 Obsidian 记录与DeepSeek的对话/明史大事记.md",
     "06 使用 Obsidian 记录与DeepSeek的对话.md",
     "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
     "04 “为记个笔记，我还要学前端编程？”.md",
-    "03 深入理解Obsidian.md",
-    "02 从0开始Obsidian探索之旅.md",
-    "01 欢迎使用 Obsidian Tutorial ！.md",
     "07.md",
-    "06 使用 Obsidian 记录与DeepSeek的对话/明史大事记.md",
-    "06 使用 Obsidian 记录与DeepSeek的对话",
-    "前端知识概要/值得学习的前端、全栈技术栈.md",
-    "前端知识概要/HTML.md",
+    "assets/06 使用 Obsidian 记录与DeepSeek的对话",
+    "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
+    "assets/前端知识概要/HTML.md",
     "值得学习的前端/全栈技术栈 1.md",
     "值得学习的前端/全栈技术栈.md",
     "值得学习的前端",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍.md",
-    "前端知识概要/React.md",
-    "前端知识概要/VS Code.md",
-    "前端知识概要/CSS.md",
-    "前端知识概要/NodeJS.md",
-    "前端知识概要/JavaScript.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "前端知识概要",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍.md",
+    "assets/前端知识概要/React.md",
+    "assets/前端知识概要/VS Code.md",
+    "assets/前端知识概要/CSS.md",
+    "assets/前端知识概要/NodeJS.md",
+    "assets/前端知识概要/JavaScript.md",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
+    "assets/前端知识概要",
     "assets/Pasted image 20251017143536.png",
     "assets",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
     "欢迎.md"
   ]
 }

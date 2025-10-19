@@ -32,7 +32,7 @@
         aspect-ratio: 4/3;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     ">
-        <img src="https://ik.imagekit.io/neonity/OGs/og-image.png?updatedAt=1760598495348" 
+        <img src="https://ik.imagekit.io/neonity/OGs/Agentic-Vibe-Coding.webp?updatedAt=1760876124218" 
              style="width: 100%; height: 100%; object-fit: cover;" />
     </div>
 </div>
