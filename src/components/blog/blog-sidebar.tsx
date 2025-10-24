@@ -13,9 +13,10 @@ import Image from "next/image";
 interface BlogSidebarProps {
   posts: BlogPost[];
   currentSlug?: string;
+  latestPosts?: BlogPost[]; // 新增：最新文章列表
 }
 
-export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
+export function BlogSidebar({ posts, currentSlug, latestPosts }: BlogSidebarProps) {
   const [searchTerm, setSearchTerm] = useState("");
   // 新增：主题状态
   const [isDark, setIsDark] = useState<boolean>(() => {
@@ -178,7 +179,7 @@ export function BlogSidebar({ posts, currentSlug }: BlogSidebarProps) {
           <CardTitle className="text-lg">最新文章</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          {posts.slice(0, 3).map((post) => (
+          {(latestPosts || posts.slice(0, 3)).map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}

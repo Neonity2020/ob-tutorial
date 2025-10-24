@@ -1,5 +1,5 @@
 import React from "react";
-import { getBlogPostWithNavigation, getAllBlogPosts } from "@/lib/blog";
+import { getBlogPostWithNavigation, getAllBlogPosts, getLatestBlogPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
 import { CalendarDays, Home, ArrowLeft, ArrowRight, User } from "lucide-react";
@@ -44,6 +44,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const { currentPost: post, previousPost, nextPost } = getBlogPostWithNavigation(slug);
   const allPosts = getAllBlogPosts();
+  const latestPosts = getLatestBlogPosts(3);
 
   if (!post) {
     notFound();
@@ -54,14 +55,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="flex flex-col lg:flex-row lg:gap-8">
         {/* 左侧侧边栏区域 - 仅在大屏幕显示，悬停时独立滚动 */}
         <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 lg:order-1 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
-          <BlogSidebar posts={allPosts} currentSlug={slug} />
+          <BlogSidebar posts={allPosts} currentSlug={slug} latestPosts={latestPosts} />
         </aside>
         
         {/* 主内容区域 */}
         <main className="lg:flex-[2_1_0%] lg:min-w-0 lg:order-2">
           {/* 移动端菜单按钮 */}
           <div className="mb-6 lg:hidden">
-            <MobileMenu posts={allPosts} currentSlug={slug} content={post.content} />
+            <MobileMenu posts={allPosts} currentSlug={slug} content={post.content} latestPosts={latestPosts} />
           </div>
           
           <article className="prose dark:prose-invert prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-primary prose-a:hover:underline max-w-none min-w-0">

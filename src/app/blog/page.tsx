@@ -1,5 +1,5 @@
 import React from "react";
-import { getAllBlogPosts } from "@/lib/blog";
+import { getAllBlogPosts, getLatestBlogPosts } from "@/lib/blog";
 import { BlogPostCard } from "@/components/blog/blog-post-card";
 import { BlogSidebar } from "@/components/blog/blog-sidebar";
 import { MobileMenu } from "@/components/blog/mobile-menu";
@@ -17,6 +17,7 @@ export const metadata = {
 
 export default function BlogPage() {
   const posts = getAllBlogPosts();
+  const latestPosts = getLatestBlogPosts(3);
 
   // 在客户端组件中预抓取若干博文页面（提升首次打开速度）
   // PrefetchPosts 会在客户端调用 next/navigation 的 router.prefetch
@@ -35,7 +36,7 @@ export default function BlogPage() {
               </Button>
             </Link>
             {/* 移动端菜单按钮 */}
-            <MobileMenu posts={posts} />
+            <MobileMenu posts={posts} latestPosts={latestPosts} />
           </div>
 
           <h1 className="text-4xl font-bold text-center mb-4">教程博客</h1>
@@ -53,7 +54,7 @@ export default function BlogPage() {
 
         {/* 侧边栏 - 仅在大屏幕显示，悬停时独立滚动 */}
         <aside className="hidden lg:block lg:flex-[1_1_0%] lg:min-w-0 mt-8 lg:mt-0 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto scrollbar-hover">
-          <BlogSidebar posts={posts} />
+          <BlogSidebar posts={posts} latestPosts={latestPosts} />
         </aside>
       </div>
     </div>

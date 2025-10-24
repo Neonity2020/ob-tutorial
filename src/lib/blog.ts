@@ -82,3 +82,40 @@ export function getBlogPostWithNavigation(currentSlug: string): {
 
   return { currentPost, previousPost, nextPost };
 }
+
+/**
+ * 获取按文件创建时间排序的最新文章
+ * @param limit 返回的文章数量，默认为3
+ */
+export function getLatestBlogPosts(limit: number = 3): BlogPost[] {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, "");
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+    
+    // 获取文件的创建时间
+    const stats = fs.statSync(fullPath);
+    const createdAt = stats.birthtime;
+
+    return {
+      slug,
+      title: data.title,
+      description: data.description,
+      date: format(new Date(data.date), 'yyyy年MM月dd日'),
+      content,
+      sortOrder: data.sortOrder || undefined,
+      author: data.author || undefined,
+      createdAt, // 添加创建时间字段
+    } as BlogPost & { createdAt: Date };
+  });
+
+  // 按创建时间降序排序（最新的在前）
+  const sortedPosts = allPostsData.sort((a, b) => 
+    b.createdAt.getTime() - a.createdAt.getTime()
+  );
+
+  // 返回指定数量的最新文章，并移除createdAt字段
+  return sortedPosts.slice(0, limit).map(({ createdAt, ...post }) => post);
+}

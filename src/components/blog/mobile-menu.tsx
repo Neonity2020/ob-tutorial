@@ -12,9 +12,10 @@ interface MobileMenuProps {
   posts: BlogPost[];
   currentSlug?: string;
   content?: string; // 文章内容，用于生成目录
+  latestPosts?: BlogPost[]; // 新增：最新文章列表
 }
 
-export function MobileMenu({ posts, currentSlug, content }: MobileMenuProps) {
+export function MobileMenu({ posts, currentSlug, content, latestPosts }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -36,7 +37,7 @@ export function MobileMenu({ posts, currentSlug, content }: MobileMenuProps) {
           
           {/* 博客侧边栏 */}
           <div>
-            <BlogSidebar posts={posts} currentSlug={currentSlug} />
+            <BlogSidebar posts={posts} currentSlug={currentSlug} latestPosts={latestPosts} />
           </div>
         </div>
       </SheetContent>

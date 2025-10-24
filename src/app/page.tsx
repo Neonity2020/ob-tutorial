@@ -1,6 +1,6 @@
 import { Footer } from "@/components/footer"; // 导入新的Footer组件
 import { LandingPageContent } from "@/components/landing-page-content";
-import { getAllBlogPosts } from "@/lib/blog";
+import { getLatestBlogPosts } from "@/lib/blog";
 import { BlogPostCard } from "@/components/blog/blog-post-card";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Newspaper, ArrowRight } from "lucide-react";
@@ -8,9 +8,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  // 获取所有博客文章并取前4篇作为最新文章
-  const allPosts = getAllBlogPosts();
-  const recentPosts = allPosts.slice(0, 4);
+  // 获取按文件创建时间排序的最新3篇文章
+  const recentPosts = getLatestBlogPosts(3);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -58,7 +57,7 @@ export default function Home() {
                 </Link>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {recentPosts.map((post) => (
                   <BlogPostCard key={post.slug} post={post} />
                 ))}
