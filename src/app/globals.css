@@ -162,3 +162,61 @@
     background-color: transparent;
   }
 }
+
+/* Shiki 代码块样式 */
+@layer components {
+  /* 代码块容器 */
+  .shiki {
+    @apply my-4 overflow-x-auto rounded-lg;
+    padding: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  }
+
+  /* 代码块滚动条优化 */
+  .shiki::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .shiki::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .shiki::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  .shiki::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* 代码块内部的 pre 标签 */
+  .shiki pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+
+  /* 代码块内部的 code 标签 */
+  .shiki code {
+    font-family: inherit;
+    background: transparent !important;
+  }
+
+  /* 行号样式（如果启用） */
+  .shiki .line {
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* 高亮行样式 */
+  .shiki .highlighted {
+    background-color: hsl(var(--muted) / 0.5);
+    border-left: 3px solid hsl(var(--primary));
+    padding-left: 0.75rem;
+    margin-left: -1rem;
+    width: calc(100% + 1rem);
+  }
+}
