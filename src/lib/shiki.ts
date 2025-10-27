@@ -8,7 +8,7 @@ let highlighterInstance: Awaited<ReturnType<typeof createHighlighter>> | null = 
 async function getHighlighter() {
   if (!highlighterInstance) {
     highlighterInstance = await createHighlighter({
-      themes: ["github-dark", "github-light"],
+      themes: ["one-dark-pro", "github-light"],
       langs: [
         "javascript",
         "typescript",
@@ -71,7 +71,7 @@ export async function highlightCode(
       ? normalizedLang
       : "text";
 
-    const themeName: BundledTheme = theme === "light" ? "github-light" : "github-dark";
+    const themeName: BundledTheme = theme === "light" ? "github-light" : "one-dark-pro";
 
     const html = highlighter.codeToHtml(code, {
       lang: lang as BundledLanguage,
@@ -129,7 +129,7 @@ export async function highlightCodeSync(
 ): Promise<string> {
   try {
     const normalizedLang = normalizeLanguage(language);
-    const themeName: BundledTheme = theme === "light" ? "github-light" : "github-dark";
+    const themeName: BundledTheme = theme === "light" ? "github-light" : "one-dark-pro";
 
     const html = await codeToHtml(code, {
       lang: normalizedLang as BundledLanguage,

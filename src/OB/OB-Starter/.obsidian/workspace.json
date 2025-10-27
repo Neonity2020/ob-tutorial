@@ -54,9 +54,33 @@
               "icon": "lucide-file",
               "title": "08 远见"
             }
+          },
+          {
+            "id": "47829669b28b3c97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/What’s New in Next.js 16.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What’s New in Next.js 16"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -241,8 +265,10 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "08ae32d631e0d4a1",
+  "active": "47829669b28b3c97",
   "lastOpenFiles": [
+    "Clippings/What’s New in Next.js 16.md",
+    "Clippings",
     "09 范式与模式.md",
     "08 远见.md",
     "02 从0开始Obsidian探索之旅.md",

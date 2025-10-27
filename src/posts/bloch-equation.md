@@ -3,7 +3,7 @@ slug: blotch-equation
 title: 布洛赫方程:磁共振的数学心脏
 description: 面向磁共振初学者的布洛赫方程入门指南,理解MRI背后的物理原理。
 date: 2025-10-27
-sortOrder: 2
+sortOrder: 9
 author: NEONITY
 ---
 
