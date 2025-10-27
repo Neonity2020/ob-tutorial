@@ -3,9 +3,12 @@
 import React, { useMemo, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import { slugify } from "@/lib/utils";
 import { highlightCode } from "@/lib/shiki";
 import { useTheme } from "next-themes";
+import "katex/dist/katex.min.css";
 
 // 定义 Code 组件的 Props 类型
 interface CodeComponentProps extends React.HTMLAttributes<HTMLElement> {
@@ -63,8 +66,8 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
   return (
     <ReactMarkdown 
-      remarkPlugins={[remarkGfm]} 
-      rehypePlugins={[]} // 移除 rehypeSlug，我们自己控制ID生成
+      remarkPlugins={[remarkGfm, remarkMath]} 
+      rehypePlugins={[rehypeKatex]} // 添加 KaTeX 数学公式支持
       components={{
         code: ({ node, inline, className, children, ...props }: CodeComponentProps) => {
           const match = /language-(\w+)/.exec(className || "");

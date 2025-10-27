@@ -174,6 +174,18 @@
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   }
 
+  /* 亮色模式下的代码块背景 */
+  :root .shiki {
+    background-color: hsl(0 0% 96%) !important;
+    border: 1px solid hsl(0 0% 90%);
+  }
+
+  /* 暗色模式下的代码块背景 */
+  .dark .shiki {
+    background-color: hsl(240 10% 3.9%) !important;
+    border: 1px solid hsl(240 5% 15%);
+  }
+
   /* 代码块滚动条优化 */
   .shiki::-webkit-scrollbar {
     height: 8px;
@@ -218,5 +230,188 @@
     padding-left: 0.75rem;
     margin-left: -1rem;
     width: calc(100% + 1rem);
+  }
+
+  /* 行内代码样式优化 */
+  code:not(pre code) {
+    @apply px-1.5 py-0.5 rounded font-mono text-sm;
+  }
+
+  /* 亮色模式下的行内代码 */
+  :root code:not(pre code) {
+    background-color: hsl(0 0% 94%);
+    color: hsl(340 82% 42%);
+    border: 1px solid hsl(0 0% 88%);
+  }
+
+  /* 暗色模式下的行内代码 */
+  .dark code:not(pre code) {
+    background-color: hsl(240 5% 15%);
+    color: hsl(262 83% 70%);
+    border: 1px solid hsl(240 5% 20%);
+  }
+}
+
+/* KaTeX 数学公式样式优化 */
+@layer components {
+  /* 基础数学公式样式 */
+  .katex {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  /* 行内公式样式 */
+  .katex-inline {
+    @apply inline-block;
+    margin: 0 0.15em;
+  }
+
+  /* 块级公式容器 */
+  .katex-display {
+    @apply my-6;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0;
+  }
+
+  /* 亮色模式下的数学公式优化 */
+  :root .katex {
+    /* 增强对比度 - 使用深色文字 */
+    color: hsl(0 0% 10%);
+  }
+
+  :root .katex .mord,
+  :root .katex .mbin,
+  :root .katex .mrel,
+  :root .katex .mop,
+  :root .katex .mopen,
+  :root .katex .mclose,
+  :root .katex .mpunct,
+  :root .katex .minner {
+    color: hsl(0 0% 5%);
+  }
+
+  /* 特殊符号增强 */
+  :root .katex .mord.text,
+  :root .katex .mord.mathdefault {
+    color: hsl(221 83% 30%);
+    font-weight: 500;
+  }
+
+  /* 运算符增强 */
+  :root .katex .mbin,
+  :root .katex .mrel {
+    color: hsl(0 0% 15%);
+    font-weight: 600;
+  }
+
+  /* 函数名增强 */
+  :root .katex .mop {
+    color: hsl(262 70% 40%);
+    font-weight: 600;
+  }
+
+  /* 分数线增强 */
+  :root .katex .frac-line {
+    border-bottom-color: hsl(0 0% 20%);
+    border-bottom-width: 1.5px;
+  }
+
+  /* 根号增强 */
+  :root .katex .sqrt > .root {
+    color: hsl(221 83% 35%);
+  }
+
+  /* 暗色模式下的数学公式 */
+  .dark .katex {
+    color: hsl(0 0% 95%);
+  }
+
+  .dark .katex .mord,
+  .dark .katex .mbin,
+  .dark .katex .mrel,
+  .dark .katex .mop,
+  .dark .katex .mopen,
+  .dark .katex .mclose,
+  .dark .katex .mpunct,
+  .dark .katex .minner {
+    color: hsl(0 0% 92%);
+  }
+
+  .dark .katex .mord.text,
+  .dark .katex .mord.mathdefault {
+    color: hsl(262 83% 70%);
+    font-weight: 500;
+  }
+
+  .dark .katex .mbin,
+  .dark .katex .mrel {
+    color: hsl(0 0% 85%);
+    font-weight: 600;
+  }
+
+  .dark .katex .mop {
+    color: hsl(262 83% 65%);
+    font-weight: 600;
+  }
+
+  .dark .katex .frac-line {
+    border-bottom-color: hsl(0 0% 70%);
+    border-bottom-width: 1.5px;
+  }
+
+  .dark .katex .sqrt > .root {
+    color: hsl(262 83% 60%);
+  }
+
+  /* 公式滚动条优化 */
+  .katex-display::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .katex-display::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .katex-display::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  .katex-display::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* 矩阵和数组增强 */
+  :root .katex .mtable .vertical-separator {
+    border-color: hsl(0 0% 30%);
+  }
+
+  .dark .katex .mtable .vertical-separator {
+    border-color: hsl(0 0% 60%);
+  }
+
+  /* 上下标优化 */
+  .katex .vlist-t {
+    display: inline-table;
+  }
+
+  /* 括号增强 */
+  :root .katex .delimsizing,
+  :root .katex .delim-size1,
+  :root .katex .delim-size2,
+  :root .katex .delim-size3,
+  :root .katex .delim-size4 {
+    color: hsl(221 70% 35%);
+    font-weight: 600;
+  }
+
+  .dark .katex .delimsizing,
+  .dark .katex .delim-size1,
+  .dark .katex .delim-size2,
+  .dark .katex .delim-size3,
+  .dark .katex .delim-size4 {
+    color: hsl(262 83% 65%);
+    font-weight: 600;
   }
 }
