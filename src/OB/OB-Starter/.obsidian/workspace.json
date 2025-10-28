@@ -8,79 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "394f0824740a2a51",
+            "id": "567f9501bedc00b9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "09 范式与模式.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "currentVersion": "1.10.1"
               },
-              "icon": "lucide-file",
-              "title": "09 范式与模式"
-            }
-          },
-          {
-            "id": "08ae32d631e0d4a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "08 远见.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "08 远见"
-            }
-          },
-          {
-            "id": "47829669b28b3c97",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/What’s New in Next.js 16.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "What’s New in Next.js 16"
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -153,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "07.md",
+                "file": "VS Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "07 的反向链接列表"
+              "title": "VS Code 的反向链接列表"
             }
           },
           {
@@ -172,11 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "VS Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "VS Code 的出链列表"
             }
           },
           {
@@ -200,12 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "VS Code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "VS Code 的大纲"
             }
           },
           {
@@ -219,7 +160,7 @@
             }
           },
           {
-            "id": "f19f1c8a2c6dff5e",
+            "id": "4566791cb5ca0fd3",
             "type": "leaf",
             "state": {
               "type": "webviewer",
@@ -231,28 +172,13 @@
               "icon": "globe-2",
               "title": "Obsidian 零基础入门教程 Vault"
             }
-          },
-          {
-            "id": "179e013ef0c4734c",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://wiki.neomatrix.club/",
-                "title": "我的第二大脑 — Neonity's Second Brain",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "我的第二大脑 — Neonity's Second Brain"
-            }
           }
         ],
         "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 499.5,
-    "collapsed": true
+    "width": 584.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -265,39 +191,43 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "47829669b28b3c97",
+  "active": "567f9501bedc00b9",
   "lastOpenFiles": [
+    "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
+    "assets/前端知识概要/React.md",
+    "assets/前端知识概要/VS Code.md",
+    "assets/前端知识概要/NodeJS.md",
+    "assets/前端知识概要/JavaScript.md",
+    "assets/前端知识概要/HTML.md",
+    "assets/前端知识概要/CSS.md",
+    "assets/前端知识概要",
+    "assets/AI Agents at Scale A data scientist’s journey to transform clients with tech.md",
+    "assets/06 使用 Obsidian 记录与DeepSeek的对话/明史大事记.md",
+    "assets/06 使用 Obsidian 记录与DeepSeek的对话",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍.md",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
+    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
     "Clippings/What’s New in Next.js 16.md",
     "Clippings",
     "09 范式与模式.md",
     "08 远见.md",
-    "02 从0开始Obsidian探索之旅.md",
     "07 人机耦合的未来.md",
-    "assets/AI Agents at Scale A data scientist’s journey to transform clients with tech.md",
     "07 web-clipping-mckinsey-blog.md",
-    "01 欢迎使用 Obsidian Tutorial ！.md",
-    "03 深入理解Obsidian.md",
-    "assets/06 使用 Obsidian 记录与DeepSeek的对话/明史大事记.md",
     "06 使用 Obsidian 记录与DeepSeek的对话.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
+    "VS Code.md",
+    "03 深入理解Obsidian.md",
     "04 “为记个笔记，我还要学前端编程？”.md",
-    "assets/06 使用 Obsidian 记录与DeepSeek的对话",
-    "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
-    "assets/前端知识概要/HTML.md",
-    "值得学习的前端/全栈技术栈 1.md",
-    "值得学习的前端/全栈技术栈.md",
-    "值得学习的前端",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍.md",
-    "assets/前端知识概要/React.md",
-    "assets/前端知识概要/VS Code.md",
-    "assets/前端知识概要/CSS.md",
-    "assets/前端知识概要/NodeJS.md",
-    "assets/前端知识概要/JavaScript.md",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "assets/前端知识概要",
-    "assets/Pasted image 20251017143536.png",
+    "02 从0开始Obsidian探索之旅.md",
+    "01 欢迎使用 Obsidian Tutorial ！.md",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
+    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
     "assets",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
-    "欢迎.md"
+    "assets/Pasted image 20251017143536.png",
+    "前端知识概要/NodeJS.md",
+    "前端知识概要/JavaScript.md",
+    "前端知识概要/CSS.md",
+    "前端知识概要"
   ]
 }
