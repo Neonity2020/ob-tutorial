@@ -30,6 +30,18 @@
               "icon": "lucide-book-up",
               "title": "版本说明 1.10.1"
             }
+          },
+          {
+            "id": "567f9501bedc00b9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.1"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.1"
+            }
           }
         ],
         "currentTab": 1
@@ -207,6 +219,7 @@
   "active": "567f9501bedc00b9",
   "lastOpenFiles": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
     "assets/前端知识概要/React.md",
     "assets/前端知识概要/VS Code.md",
@@ -228,6 +241,8 @@
     "07 人机耦合的未来.md",
     "07 web-clipping-mckinsey-blog.md",
     "06 使用 Obsidian 记录与DeepSeek的对话.md",
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "VS Code.md",
