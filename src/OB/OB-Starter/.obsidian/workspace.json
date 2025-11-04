@@ -1,64 +1,39 @@
 {
   "main": {
-    "id": "69e8c618bbe4c186",
+    "id": "8691f75bf5073df5",
     "type": "split",
     "children": [
       {
-        "id": "fa62d278dbe9883c",
+        "id": "088bef0639535735",
         "type": "tabs",
         "children": [
           {
-            "id": "567f9501bedc00b9",
+            "id": "b7dfc7276e44b284",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "image",
               "state": {
-                "currentVersion": "1.10.1"
+                "file": "assets/ima_references.png"
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.10.1"
-            }
-          },
-          {
-            "id": "567f9501bedc00b9",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.1"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.10.1"
-            }
-          },
-          {
-            "id": "567f9501bedc00b9",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.1"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.10.1"
+              "icon": "lucide-image",
+              "title": "ima_references"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "964df69252b9e875",
+    "id": "319165c607b19e84",
     "type": "split",
     "children": [
       {
-        "id": "78d563b26750c24c",
+        "id": "4caf30ead1a832cd",
         "type": "tabs",
         "children": [
           {
-            "id": "627d179d3c29c631",
+            "id": "fb9e9ef7a6f15a5d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -71,7 +46,7 @@
             }
           },
           {
-            "id": "e05e0fcf5e1617ba",
+            "id": "bfeefcfa2e703c51",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -88,7 +63,7 @@
             }
           },
           {
-            "id": "bd9e12e93bb974cc",
+            "id": "b583d794092cb8fd",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -104,20 +79,20 @@
     "width": 300
   },
   "right": {
-    "id": "5fc0c351ce7175e0",
+    "id": "a8cc443423e5f8c4",
     "type": "split",
     "children": [
       {
-        "id": "553c94681ae91283",
+        "id": "8bccd43c1885b4de",
         "type": "tabs",
         "children": [
           {
-            "id": "fa74ce3d3fd13403",
+            "id": "6c682ff828cbc68b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VS Code.md",
+                "file": "assets/ima_references.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,25 +102,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "VS Code 的反向链接列表"
+              "title": "ima_references 的反向链接列表"
             }
           },
           {
-            "id": "d8425d9c355da2c2",
+            "id": "437c1fb2006e1883",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VS Code.md",
+                "file": "assets/ima_references.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "VS Code 的出链列表"
+              "title": "ima_references 的出链列表"
             }
           },
           {
-            "id": "28ad6ed63b8ef7fc",
+            "id": "db5963e1d56de723",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -160,50 +135,26 @@
             }
           },
           {
-            "id": "9dce4cfa98999303",
+            "id": "67a1f403cbe8df07",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "VS Code.md",
+                "file": "assets/ima_references.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "VS Code 的大纲"
-            }
-          },
-          {
-            "id": "4ea67df9f19a0726",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
-          {
-            "id": "4566791cb5ca0fd3",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.ob-tutorial.org/",
-                "title": "Obsidian 零基础入门教程 Vault",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Obsidian 零基础入门教程 Vault"
+              "title": "ima_references 的大纲"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 584.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,49 +167,6 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "567f9501bedc00b9",
-  "lastOpenFiles": [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
-    "assets/前端知识概要/React.md",
-    "assets/前端知识概要/VS Code.md",
-    "assets/前端知识概要/NodeJS.md",
-    "assets/前端知识概要/JavaScript.md",
-    "assets/前端知识概要/HTML.md",
-    "assets/前端知识概要/CSS.md",
-    "assets/前端知识概要",
-    "assets/AI Agents at Scale A data scientist’s journey to transform clients with tech.md",
-    "assets/06 使用 Obsidian 记录与DeepSeek的对话/明史大事记.md",
-    "assets/06 使用 Obsidian 记录与DeepSeek的对话",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍.md",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
-    "Clippings/What’s New in Next.js 16.md",
-    "Clippings",
-    "09 范式与模式.md",
-    "08 远见.md",
-    "07 人机耦合的未来.md",
-    "07 web-clipping-mckinsey-blog.md",
-    "06 使用 Obsidian 记录与DeepSeek的对话.md",
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    "VS Code.md",
-    "03 深入理解Obsidian.md",
-    "04 “为记个笔记，我还要学前端编程？”.md",
-    "02 从0开始Obsidian探索之旅.md",
-    "01 欢迎使用 Obsidian Tutorial ！.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/模仿马尔克斯《百年孤独》那种略带魔幻现实主义的开篇风格，写一段关于一个老镇的介绍。.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
-    "assets",
-    "assets/Pasted image 20251017143536.png",
-    "前端知识概要/NodeJS.md",
-    "前端知识概要/JavaScript.md",
-    "前端知识概要/CSS.md",
-    "前端知识概要"
-  ]
+  "active": "b7dfc7276e44b284",
+  "lastOpenFiles": []
 }
