@@ -302,5 +302,8 @@ These features are deprecated in Next.js 16 and will be removed in a future majo
 	images.domains 配置：请使用 `images.remotePatterns` 以更安全地限制远程图像源。
 - **revalidateTag() single argument:** Replace with `revalidateTag(tag, profile)` for SWR, or `updateTag(tag)` in Server Actions for read-your-writes.  
 	revalidateTag() 单一参数：用 `revalidateTag(tag, profile)` 替换 SWR，或在服务器操作中用 `updateTag(tag)` 读取您的写入。
+<<<<<<< HEAD
 
 We are dedicated React and React Native specialists, turning your dreams and ideas into successful projects. 🔗 [linktr.ee/reactonix](http://linktr.ee/reactonix)
+=======
+>>>>>>> 3d81e2b9bfd466483abc497a8ab2dc3d3b6b103d
