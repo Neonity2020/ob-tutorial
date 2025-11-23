@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "top10-pieces-of-wisdom.md",
-                "mode": "source",
+                "file": "道金斯vs费曼：生命、进化与智能的未来.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "top10-pieces-of-wisdom"
+              "title": "道金斯vs费曼：生命、进化与智能的未来"
             }
           }
         ]
@@ -203,48 +203,49 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "627d179d3c29c631",
+  "active": "7cd13454b029b526",
   "lastOpenFiles": [
-    "assets/长时记忆.md",
-    "assets/ob_ui.png",
-    "assets/ima_references.png",
-    "Clippings/Zero configuration NextJS deployment to a self hosted VPS with Kamal. A comprehensive guide..md",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763931372316",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930889559",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930802746",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930768748",
+    "认知星系：当进化论遇见广义相对论.md",
+    "自私的基因：跟道金斯聊达尔文.md",
+    "你好，时空：跟费曼聊广义相对论.md",
+    "道金斯vs费曼：生命、进化与智能的未来.md",
     "12 布洛赫方程Talk - ima.md",
-    "11 布洛赫方程.md",
-    "10 本章小结：记忆 - 津巴多普通心理学.md",
-    "Top 10 Pieces of Wisdom.md",
-    "top10-pieces-of-wisdom.md",
-    "first-principle.md",
     "11 纳瓦尔智慧.md",
+    "11 布洛赫方程.md",
     "10 MRI QA - Bloch Equations.md",
+    "10 本章小结：记忆 - 津巴多普通心理学.md",
     "09 范式与模式.md",
-    "08 远见.md",
     "07 web-clipping-mckinsey-blog.md",
+    "08 远见.md",
     "07 人机耦合的未来.md",
     "06 使用 Obsidian 记录与DeepSeek的对话.md",
     "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
     "04 “为记个笔记，我还要学前端编程？”.md",
     "03 深入理解Obsidian.md",
     "02 从0开始Obsidian探索之旅.md",
-    "Clippings/What’s New in Next.js 16.md",
     "01 欢迎使用 Obsidian Tutorial ！.md",
+    "Clippings/What’s New in Next.js 16.md",
+    "Clippings/Zero configuration NextJS deployment to a self hosted VPS with Kamal. A comprehensive guide..md",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930210730",
+    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930171077",
+    "自私的基因：跟道金斯聊达尔文.md.tmp.6236.1763928877686",
+    "你好，时空：跟费曼聊广义相对论.md.tmp.6236.1763927737690",
+    "how-to-use-claude-code-with-kimi-k2.md",
+    "first-principle.md",
+    "AI时代生存指南.md",
+    "认知星系：当进化论遇见广义相对论.md.tmp.6236.1763926571135",
+    "AI时代生存指南.md.tmp.6236.1763925963189",
+    "top10-pieces-of-wisdom.md",
+    "assets/ob_ui.png",
+    "assets/ima_references.png",
     "assets/PDF/bloch._nuclear_induction_1946_the_equations.pdf",
     "assets/Pasted image 20251029085128.png",
-    "assets/PDF",
-    "assets/前端知识概要/值得学习的前端、全栈技术栈.md",
-    "assets/前端知识概要/React.md",
-    "assets/前端知识概要/VS Code.md",
-    "assets/前端知识概要/NodeJS.md",
-    "assets/前端知识概要/JavaScript.md",
-    "assets/前端知识概要",
-    "assets/06 使用 Obsidian 记录与DeepSeek的对话",
     "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
-    "Clippings",
     "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？",
-    "assets",
-    "assets/Pasted image 20251017143536.png",
-    "前端知识概要"
+    "assets/Pasted image 20251017143536.png"
   ]
 }
