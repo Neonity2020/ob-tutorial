@@ -1,20 +1,20 @@
 {
   "main": {
-    "id": "69e8c618bbe4c186",
+    "id": "8691f75bf5073df5",
     "type": "split",
     "children": [
       {
-        "id": "56393588a5039b2d",
+        "id": "088bef0639535735",
         "type": "tabs",
         "children": [
           {
-            "id": "7cd13454b029b526",
+            "id": "b7dfc7276e44b284",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "道金斯vs费曼：生命、进化与智能的未来.md",
-                "mode": "preview",
+                "file": "08 远见.md",
+                "mode": "source",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "道金斯vs费曼：生命、进化与智能的未来"
+              "title": "08 远见"
             }
           }
         ]
@@ -37,15 +37,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "964df69252b9e875",
+    "id": "319165c607b19e84",
     "type": "split",
     "children": [
       {
-        "id": "78d563b26750c24c",
+        "id": "4caf30ead1a832cd",
         "type": "tabs",
         "children": [
           {
-            "id": "627d179d3c29c631",
+            "id": "fb9e9ef7a6f15a5d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "e05e0fcf5e1617ba",
+            "id": "bfeefcfa2e703c51",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "bd9e12e93bb974cc",
+            "id": "b583d794092cb8fd",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,20 +91,20 @@
     "width": 300
   },
   "right": {
-    "id": "5fc0c351ce7175e0",
+    "id": "a8cc443423e5f8c4",
     "type": "split",
     "children": [
       {
-        "id": "553c94681ae91283",
+        "id": "8bccd43c1885b4de",
         "type": "tabs",
         "children": [
           {
-            "id": "fa74ce3d3fd13403",
+            "id": "6c682ff828cbc68b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VS Code.md",
+                "file": "12 布洛赫方程Talk - ima.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,25 +114,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "VS Code 的反向链接列表"
+              "title": "12 布洛赫方程Talk - ima 的反向链接列表"
             }
           },
           {
-            "id": "d8425d9c355da2c2",
+            "id": "437c1fb2006e1883",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VS Code.md",
+                "file": "12 布洛赫方程Talk - ima.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "VS Code 的出链列表"
+              "title": "12 布洛赫方程Talk - ima 的出链列表"
             }
           },
           {
-            "id": "28ad6ed63b8ef7fc",
+            "id": "db5963e1d56de723",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,50 +147,26 @@
             }
           },
           {
-            "id": "9dce4cfa98999303",
+            "id": "67a1f403cbe8df07",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "VS Code.md",
+                "file": "12 布洛赫方程Talk - ima.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "VS Code 的大纲"
-            }
-          },
-          {
-            "id": "4ea67df9f19a0726",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
-          {
-            "id": "058b7cbcc1f66620",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.ob-tutorial.org/blog/bloch-equation",
-                "title": "布洛赫方程:磁共振的数学心脏 | Obsidian 零基础入门教程 Vault",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "布洛赫方程:磁共振的数学心脏 | Obsidian 零基础入门教程 Vault"
+              "title": "12 布洛赫方程Talk - ima 的大纲"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 701.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,49 +179,31 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "7cd13454b029b526",
+  "active": "b7dfc7276e44b284",
   "lastOpenFiles": [
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763931372316",
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930889559",
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930802746",
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930768748",
+    "道金斯vs费曼：生命、进化与智能的未来.md",
     "认知星系：当进化论遇见广义相对论.md",
     "自私的基因：跟道金斯聊达尔文.md",
     "你好，时空：跟费曼聊广义相对论.md",
-    "道金斯vs费曼：生命、进化与智能的未来.md",
-    "12 布洛赫方程Talk - ima.md",
-    "11 纳瓦尔智慧.md",
-    "11 布洛赫方程.md",
-    "10 MRI QA - Bloch Equations.md",
-    "10 本章小结：记忆 - 津巴多普通心理学.md",
-    "09 范式与模式.md",
-    "07 web-clipping-mckinsey-blog.md",
-    "08 远见.md",
-    "07 人机耦合的未来.md",
-    "06 使用 Obsidian 记录与DeepSeek的对话.md",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？.md",
-    "04 “为记个笔记，我还要学前端编程？”.md",
-    "03 深入理解Obsidian.md",
-    "02 从0开始Obsidian探索之旅.md",
-    "01 欢迎使用 Obsidian Tutorial ！.md",
-    "Clippings/What’s New in Next.js 16.md",
-    "Clippings/Zero configuration NextJS deployment to a self hosted VPS with Kamal. A comprehensive guide..md",
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930210730",
-    "道金斯vs费曼：生命、进化与智能的未来.md.tmp.6236.1763930171077",
-    "自私的基因：跟道金斯聊达尔文.md.tmp.6236.1763928877686",
-    "你好，时空：跟费曼聊广义相对论.md.tmp.6236.1763927737690",
+    "top10-pieces-of-wisdom.md",
     "how-to-use-claude-code-with-kimi-k2.md",
     "first-principle.md",
-    "AI时代生存指南.md",
-    "认知星系：当进化论遇见广义相对论.md.tmp.6236.1763926571135",
-    "AI时代生存指南.md.tmp.6236.1763925963189",
-    "top10-pieces-of-wisdom.md",
-    "assets/ob_ui.png",
-    "assets/ima_references.png",
-    "assets/PDF/bloch._nuclear_induction_1946_the_equations.pdf",
     "assets/Pasted image 20251029085128.png",
-    "assets/05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "05 如何结合 DeepSeek，在 Obsidian 中记AI交互笔记？/Pasted image 20251017184929.png",
-    "assets/Pasted image 20251017143536.png"
+    "assets/PDF/bloch._nuclear_induction_1946_the_equations.pdf",
+    "assets/PDF",
+    "Top 10 Pieces of Wisdom.md",
+    "AI时代生存指南.md",
+    "11 纳瓦尔智慧.md",
+    "10 MRI QA - Bloch Equations.md",
+    "latex.md",
+    "13 TailwindCSS Demo.md",
+    "12 布洛赫方程Talk - ima.md",
+    "11 布洛赫方程.md",
+    "10 本章小结：记忆 - 津巴多普通心理学.md",
+    "08 远见.md",
+    "07 web-clipping-mckinsey-blog.md",
+    "Clippings/peapix-api-doc.md",
+    "07 人机耦合的未来.md",
+    "assets/ima_references.png"
   ]
 }
