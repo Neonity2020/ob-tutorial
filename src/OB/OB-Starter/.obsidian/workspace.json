@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "088bef0639535735",
+        "id": "1b8bcda4985d4e39",
         "type": "tabs",
         "children": [
           {
-            "id": "b7dfc7276e44b284",
+            "id": "cf608d12b7198a4f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "道金斯vs费曼：生命、进化与智能的未来.md",
+                "file": "how-to-write-like-dan-koe/part2-zh-cn.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "道金斯vs费曼：生命、进化与智能的未来"
+              "title": "part2-zh-cn"
             }
           }
         ]
@@ -170,22 +170,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "b7dfc7276e44b284",
+  "active": "cf608d12b7198a4f",
   "lastOpenFiles": [
-    "08 远见.md",
+    "how-to-write-like-dan-koe/part2-footnotes.md",
+    "how-to-write-like-dan-koe/part2-zh-cn.md",
+    "how-to-write-like-dan-koe/part2.md",
+    "模糊的.md",
+    "潮流.md",
+    "复利.md",
+    "瓶颈.md",
+    "fuzzy.md",
+    "如何像天才一样思考：解锁创新与深度的心智模式.md",
+    "Clippings/如何做出伟大的工作 - How to Do Great Work.md",
+    "Clippings/Part 2 - How to Build Your First AI Creative Team.md",
+    "Clippings/Part 2 How to Build Your First AI Creative Team.md",
+    "作为一名影像医学生，我该如何理解布洛赫方程？.md",
+    "2025-12-14.md",
+    "你好，时空：跟费曼聊广义相对论.md",
+    "NextJS/NextJS + Prisma 7.md",
     "道金斯vs费曼：生命、进化与智能的未来.md",
+    "NextJS",
+    "08 远见.md",
     "认知星系：当进化论遇见广义相对论.md",
     "自私的基因：跟道金斯聊达尔文.md",
-    "你好，时空：跟费曼聊广义相对论.md",
     "top10-pieces-of-wisdom.md",
     "how-to-use-claude-code-with-kimi-k2.md",
     "first-principle.md",
@@ -195,15 +211,6 @@
     "Top 10 Pieces of Wisdom.md",
     "AI时代生存指南.md",
     "11 纳瓦尔智慧.md",
-    "10 MRI QA - Bloch Equations.md",
-    "latex.md",
-    "13 TailwindCSS Demo.md",
-    "12 布洛赫方程Talk - ima.md",
-    "11 布洛赫方程.md",
-    "10 本章小结：记忆 - 津巴多普通心理学.md",
-    "07 web-clipping-mckinsey-blog.md",
-    "Clippings/peapix-api-doc.md",
-    "07 人机耦合的未来.md",
     "assets/ima_references.png"
   ]
 }
