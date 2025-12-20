@@ -1,3 +1,11 @@
+---
+slug: how-to-write-with-dan-koe
+title: 如何像 Dan Koe 一样写作
+description: 学习 Dan Koe，构建自己的Agents集群
+date: 2025-12-20
+sortOrder: 12
+author: NEONITY
+---
 # 第二部分：如何建立你的第一个AI创意团队
 
 #### *从零散的提示词到思考系统*
